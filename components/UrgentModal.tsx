@@ -3,16 +3,16 @@ import { AlertTriangle, ShieldCheck, Ban, FileText, Lock, CalendarCheck, CheckCi
 
 /**
  * CONFIGURATION FOR ASPECT RATIO & SCALING
- * Adjusted Scale Base for the new "taller" stacked layout
+ * Restored Widescreen Base (850x550) for the Hybrid Layout
  */
-const BASE_WIDTH = 500; // Narrower base for mobile-first feel
-const BASE_HEIGHT = 800; // Taller base for stacked content
+const BASE_WIDTH = 850;
+const BASE_HEIGHT = 550;
 const ASPECT_RATIO = BASE_WIDTH / BASE_HEIGHT;
 
 // Margins "peek" to ensure background is visible
 const PEEK_X = 16;
-const PEEK_Y_MIN = 30;
-const PEEK_Y_PERCENT = 0.05;
+const PEEK_Y_MIN = 28;
+const PEEK_Y_PERCENT = 0.08;
 
 interface UrgentModalProps {
   isOpen: boolean;
@@ -83,7 +83,6 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
       const availableWidth = vw - marginX;
       const availableHeight = vh - marginY;
 
-      // Fit logic: prioritization on Width for readability, but constrained by height
       let targetW = availableWidth;
       let targetH = targetW / ASPECT_RATIO;
 
@@ -92,8 +91,7 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
         targetW = targetH * ASPECT_RATIO;
       }
 
-      // Allow slightly larger scaling for readability on desktop, mainly limited by height
-      const computedScale = Math.min(targetW / BASE_WIDTH, 1.2);
+      const computedScale = Math.min(targetW / BASE_WIDTH, 1);
       setScale(computedScale);
     };
 
@@ -141,7 +139,7 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
       {/* POSITIONING WRAPPER */}
       <div
         className="relative z-20 flex h-full w-full items-center justify-center pointer-events-none"
-      // Center alignment since it's a taller card now
+        style={{ transform: 'translateY(6%)' }}
       >
         {/* SCALING CONTAINER */}
         <div
@@ -154,7 +152,7 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
           className="pointer-events-auto relative shrink-0 origin-center shadow-2xl transition-transform duration-200 ease-out flex flex-col"
         >
           {/* CARD BODY */}
-          <div className="flex h-full w-full flex-col overflow-hidden rounded-xl bg-white shadow-2xl">
+          <div className="flex h-full w-full flex-col overflow-hidden rounded-xl bg-white shadow-2xl ring-1 ring-white/10">
 
             {/* 1. HEADER (Red Full Width) */}
             <header className="shrink-0 bg-[#D90429] p-5 text-center text-white relative flex flex-col items-center justify-center gap-2">
@@ -179,7 +177,7 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
             </div>
 
             {/* 3. SCROLLABLE CONTENT AREA */}
-            <div className="flex-1 overflow-y-auto bg-white px-5 py-5 custom-scrollbar">
+            <div className="flex-1 overflow-hidden bg-white px-5 py-5">
 
               {/* Report Box */}
               <div className="mb-5 rounded-lg border border-gray-200 bg-white p-3.5 shadow-sm">
@@ -198,43 +196,47 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                 Secure the Deep-Penetrating Formula directly from the FDA-Registered Facility.
               </p>
 
-              {/* STACKED CARDS */}
-              <div className="flex flex-col gap-3">
+              {/* GRID CARDS (Hybrid Layout) */}
+              <div className="grid grid-cols-2 gap-4 items-stretch">
 
                 {/* RED CARD (Resellers) */}
-                <div className="rounded-lg bg-[#FFF5F5] border border-[#FECACA] p-4 flex items-center gap-4">
-                  <div className="shrink-0 rounded-full bg-[#FEE2E2] p-2">
-                    <Ban className="h-6 w-6 text-[#DC2626]" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-base font-bold text-[#991B1B] leading-tight">Third-Party Resellers</h3>
-                    <p className="text-[11px] font-semibold text-[#B91C1C] mb-1">(Amazon / eBay / Walmart)</p>
-                    <ul className="text-[11px] text-gray-700 space-y-0.5 font-medium">
-                      <li>• Risk of permanent nail bed damage.</li>
-                      <li>• <span className="font-bold">NO</span> Refund Validity.</li>
-                    </ul>
+                <div className="rounded-lg bg-[#FFF5F5] border border-[#FECACA] p-4 flex flex-col justify-start">
+                  <div className="flex items-start gap-3">
+                    <div className="shrink-0 rounded-full bg-[#FEE2E2] p-2">
+                      <Ban className="h-5 w-5 text-[#DC2626]" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-sm font-bold text-[#991B1B] leading-none">Third-Party Resellers</h3>
+                      <p className="text-[11px] font-semibold text-[#B91C1C] mt-1 mb-2">(Amazon / eBay / Walmart)</p>
+                      <ul className="text-[11px] text-gray-700 space-y-1.5 font-medium">
+                        <li>• Risk of permanent nail bed damage.</li>
+                        <li>• <span className="font-bold">NO</span> Refund Validity.</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
 
                 {/* GREEN CARD (Official) */}
-                <div className="relative rounded-lg bg-[#F0FDF4] border-2 border-[#16A34A] p-4 flex items-center gap-4 shadow-sm">
+                <div className="relative rounded-lg bg-[#F0FDF4] border-2 border-[#16A34A] p-4 flex flex-col justify-start shadow-sm">
 
                   {/* Badge */}
                   <div className="absolute top-0 right-0 bg-[#16A34A] text-white text-[9px] font-bold px-2 py-0.5 rounded-bl-lg uppercase tracking-wider">
                     Recommended
                   </div>
 
-                  <div className="shrink-0 rounded-full bg-[#DCFCE7] p-2">
-                    <ShieldCheck className="h-6 w-6 text-[#16A34A]" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-base font-bold text-[#14532D] leading-tight">Official Manufacturer</h3>
-                    <p className="text-[11px] font-semibold text-[#16A34A] mb-1">(Direct from Facility)</p>
-                    <ul className="text-[11px] text-gray-800 space-y-0.5 font-medium">
-                      <li>• <strong>Fresh Batch Guarantee</strong> (Potency check).</li>
-                      <li>• 60-Day Money-Back 'Empty Bottle' Guarantee.</li>
-                      <li>• Use it all. If it fails, we refund you.*</li>
-                    </ul>
+                  <div className="flex items-start gap-3">
+                    <div className="shrink-0 rounded-full bg-[#DCFCE7] p-2">
+                      <ShieldCheck className="h-5 w-5 text-[#16A34A]" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-sm font-bold text-[#14532D] leading-none">Official Manufacturer</h3>
+                      <p className="text-[11px] font-semibold text-[#16A34A] mt-1 mb-2">(Direct from Facility)</p>
+                      <ul className="text-[11px] text-gray-800 space-y-1.5 font-medium">
+                        <li>• <strong>Fresh Batch Guarantee</strong> (Potency check).</li>
+                        <li>• 60-Day Money-Back 'Empty Bottle' Guarantee.</li>
+                        <li>• Use it all. If it fails, we refund you.*</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
 
