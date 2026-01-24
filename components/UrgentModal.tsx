@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
-import { AlertTriangle, ShieldCheck, Ban, FileText, Lock, CalendarCheck, CheckCircle2, Loader2, Award, Factory } from 'lucide-react';
+import { AlertTriangle, ShieldCheck, Ban, FileText, Lock, CalendarCheck, CheckCircle2, Loader2, Award, Factory, X } from 'lucide-react';
 
 /**
  * CONFIGURATION FOR ASPECT RATIO & SCALING
@@ -169,6 +169,14 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
 
                         {/* 1. HEADLINE - Compacted Padding */}
                         <header className="shrink-0 bg-alert px-5 py-3 text-white shadow-md relative z-10 flex items-center justify-center gap-3">
+                            {/* Close button that redirects */}
+                            <button
+                                onClick={onConfirm}
+                                className="absolute right-3 top-3 rounded-full bg-black/30 p-1.5 text-white shadow-lg transition-all hover:bg-black/60 hover:scale-110 active:scale-95"
+                                title="Close"
+                            >
+                                <X size={20} strokeWidth={3} />
+                            </button>
                             <AlertTriangle className="h-8 w-8 shrink-0 text-white" strokeWidth={2} />
                             <div className="flex flex-row items-center gap-2 text-left">
                                 <h2 className="text-[20px] font-bold uppercase tracking-wide text-white leading-tight whitespace-nowrap">
@@ -353,14 +361,22 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                                 </div>
 
                                 {/* Session */}
-                                <div className="flex items-center gap-1.5 text-[13px] text-gray-600">
-                                    <span className="relative flex h-1.5 w-1.5">
-                                        <span className={`absolute inline-flex h-full w-full rounded-full ${isVerified ? 'animate-ping bg-green-400' : 'bg-gray-400'} opacity-75`}></span>
-                                        <span className={`relative inline-flex h-1.5 w-1.5 rounded-full ${isVerified ? 'bg-green-500' : 'bg-green-500'}`}></span>
-                                    </span>
-                                    <span className="font-bold tracking-wider">
-                                        {isVerified ? 'ONLINE' : 'CONNECTING...'}
-                                    </span>
+                                <div className="flex items-center gap-4">
+                                    <div className="flex items-center gap-1.5 text-[13px] text-gray-600">
+                                        <span className="relative flex h-1.5 w-1.5">
+                                            <span className={`absolute inline-flex h-full w-full rounded-full ${isVerified ? 'animate-ping bg-green-400' : 'bg-gray-400'} opacity-75`}></span>
+                                            <span className={`relative inline-flex h-1.5 w-1.5 rounded-full ${isVerified ? 'bg-green-500' : 'bg-gray-400'}`}></span>
+                                        </span>
+                                        <span className="font-bold tracking-wider">
+                                            {isVerified ? 'ONLINE' : 'CONNECTING...'}
+                                        </span>
+                                    </div>
+                                    <button
+                                        onClick={onConfirm}
+                                        className="text-[13px] font-black uppercase tracking-widest text-gray-900 hover:text-alert transition-colors underline underline-offset-4 decoration-2"
+                                    >
+                                        CLOSE
+                                    </button>
                                 </div>
                             </div>
 
