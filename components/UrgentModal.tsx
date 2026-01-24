@@ -232,7 +232,8 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                     <p className="text-[11px] font-semibold text-[#16A34A] mb-1">(Direct from Facility)</p>
                     <ul className="text-[11px] text-gray-800 space-y-0.5 font-medium">
                       <li>• <strong>Fresh Batch Guarantee</strong> (Potency check).</li>
-                      <li>• 60-Day "Empty Bottle" Refund Policy.</li>
+                      <li>• 60-Day Money-Back 'Empty Bottle' Guarantee.</li>
+                      <li>• Use it all. If it fails, we refund you.*</li>
                     </ul>
                   </div>
                 </div>
