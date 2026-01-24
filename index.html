@@ -7,31 +7,29 @@
   <title>Urgent Consumer Alert</title>
   <meta name="description"
     content="Beware of counterfeits. Learn how to identify authentic Kerassentials and purchase safely from the official website." />
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    window.tailwind = {
-      config: {
-        theme: {
-          extend: {
-            colors: {
-              alert: '#D90429',
-              'alert-dark': '#8D0801',
-              safe: '#2D6A4F',
-              'safe-light': '#40916C',
-              'safe-glow': '#52B788',
-            },
-            fontFamily: {
-              sans: ['Inter', 'system-ui', 'sans-serif'],
-              mono: ['Fira Code', 'monospace'],
-            },
-            animation: {
-              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-            }
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            alert: '#D90429',
+            'alert-dark': '#8D0801',
+            safe: '#2D6A4F',
+            'safe-light': '#40916C',
+            'safe-glow': '#52B788',
           },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['Fira Code', 'monospace'],
+          },
+          animation: {
+            'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          }
         },
-      }
+      },
     }
   </script>
-  <script src="https://cdn.tailwindcss.com" defer></script>
   <style>
     /* Custom Scrollbar for inside the modal content */
     .custom-scrollbar::-webkit-scrollbar {
