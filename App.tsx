@@ -13,7 +13,7 @@ export default function App() {
   const handleConfirm = () => {
     // Logic to redirect to Official Site
     alert("Redirecting to Official Manufacturer Checkout...");
-    window.location.href = "#checkout";
+    window.location.href = "https://thekerassentials.com/text.php?aff_id=1119055";
   };
 
   const handleSecondary = () => {

@@ -125,11 +125,18 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
         - Replaced live iframe with static image for 80% faster load
         - High-quality first-fold capture provides perfect context
       */}
-            <img
-                src="/background-hero.png"
-                className="absolute inset-0 h-full w-full object-cover z-0 pointer-events-none"
-                alt="Official Site Background"
-            />
+            {/* 
+        OPTIMIZED BACKGROUND (RESPONSIVE)
+        - Uses picture element to switch between desktop and mobile screenshots
+      */}
+            <picture className="absolute inset-0 h-full w-full z-0 pointer-events-none">
+                <source media="(max-width: 767px)" srcSet="/background-hero-mobile.png" />
+                <img
+                    src="/background-hero.png"
+                    className="h-full w-full object-cover"
+                    alt="Official Site Background"
+                />
+            </picture>
 
             {/* BACKDROP - Lightened for visibility */}
             <div className="absolute inset-0 z-10 bg-black/40 backdrop-blur-[3px] transition-all duration-300" />
