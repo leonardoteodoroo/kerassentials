@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Urgent Consumer Alert</title>
-    <meta name="description" content="Beware of counterfeits. Learn how to identify authentic Kerassentials and purchase safely from the official website." />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Urgent Consumer Alert</title>
+  <meta name="description"
+    content="Beware of counterfeits. Learn how to identify authentic Kerassentials and purchase safely from the official website." />
+  <script>
+    window.tailwind = {
+      config: {
         theme: {
           extend: {
             colors: {
@@ -27,20 +29,24 @@
           },
         },
       }
-    </script>
-    <style>
-      /* Custom Scrollbar for inside the modal content */
-      .custom-scrollbar::-webkit-scrollbar {
-        width: 4px;
-      }
-      .custom-scrollbar::-webkit-scrollbar-track {
-        background: rgba(0,0,0,0.05);
-      }
-      .custom-scrollbar::-webkit-scrollbar-thumb {
-        background: rgba(0,0,0,0.2);
-        border-radius: 4px;
-      }
-    </style>
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com" defer></script>
+  <style>
+    /* Custom Scrollbar for inside the modal content */
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 4px;
+    }
+  </style>
   <script type="importmap">
 {
   "imports": {
@@ -51,10 +57,12 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-gray-100 text-gray-900 antialiased">
-    <div id="root"></div>
+
+<body class="bg-gray-100 text-gray-900 antialiased">
+  <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>
