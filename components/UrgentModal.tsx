@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
-import { AlertTriangle, ShieldCheck, Ban, FileText, Lock, CalendarCheck, CheckCircle2, Loader2 } from 'lucide-react';
+import { AlertTriangle, ShieldCheck, Ban, FileText, Lock, CalendarCheck, CheckCircle2, Loader2, Award, Factory } from 'lucide-react';
 
 /**
  * CONFIGURATION FOR ASPECT RATIO & SCALING
@@ -129,12 +129,20 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
         OPTIMIZED BACKGROUND (RESPONSIVE)
         - Uses picture element to switch between desktop and mobile screenshots
       */}
-            <picture className="absolute inset-0 h-full w-full z-0 pointer-events-none">
-                <source media="(max-width: 767px)" srcSet="/background-hero-mobile.png" />
+            <picture className="absolute inset-0 h-[100dvh] w-full z-0 pointer-events-none">
+                <source
+                    media="(max-width: 767px)"
+                    srcSet="/background-hero-mobile.webp"
+                    width="500"
+                    height="757"
+                />
                 <img
-                    src="/background-hero.png"
-                    className="h-full w-full object-cover"
+                    src="/background-hero.webp"
+                    className="h-full w-full object-cover object-top"
                     alt="Official Site Background"
+                    width="1680"
+                    height="1050"
+                    fetchPriority="high"
                 />
             </picture>
 
@@ -182,10 +190,10 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                         </div>
 
                         {/* 3. MAIN BODY - Flex Grow, No Scroll */}
-                        <div className="flex-1 flex flex-col justify-between bg-gray-50 px-6 py-4">
+                        <div className="flex-1 flex flex-col justify-center gap-3 bg-gray-50 px-6 py-4">
 
                             {/* Top Warning Box - Reduced Margins/Padding */}
-                            <div className="mb-2 rounded-lg border border-gray-200 bg-white p-2.5 shadow-sm">
+                            <div className="rounded-lg border border-gray-200 bg-white p-2.5 shadow-sm">
                                 <div className="mb-1.5 flex items-center gap-1.5 border-b border-gray-100 pb-1.5">
                                     <FileText className="h-3.5 w-3.5 text-gray-500" />
                                     <span className="text-[10px] font-bold uppercase tracking-wider text-gray-500">
@@ -198,7 +206,7 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                                 </p>
                             </div>
 
-                            <p className="mb-1 text-center text-sm font-semibold text-gray-600 leading-tight">
+                            <p className="text-center text-sm font-semibold text-gray-600 leading-tight">
                                 Secure the Deep-Penetrating Formula directly from the FDA-Registered Facility.
                             </p>
 
@@ -249,7 +257,29 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                                                     <span className="text-safe font-bold">•</span>
                                                     <span>60-Day Money-Back Guarantee.</span>
                                                 </li>
+                                                <li className="text-xs leading-tight text-gray-800 flex items-start gap-1.5">
+                                                    <span className="text-safe font-bold">•</span>
+                                                    <span>Use it all. If it fails, we refund you.*</span>
+                                                </li>
                                             </ul>
+
+                                            {/* Trust Badges */}
+                                            <div className="mt-2.5 flex items-center gap-2">
+                                                <div className="flex items-center gap-1.5 rounded border border-yellow-300 bg-yellow-50 px-2 py-1 shadow-sm">
+                                                    <Award size={12} className="text-yellow-600" />
+                                                    <div className="flex flex-col leading-[0.8]">
+                                                        <span className="text-[8px] font-black uppercase text-yellow-800">GMP</span>
+                                                        <span className="text-[7px] font-bold uppercase text-yellow-700">Certified</span>
+                                                    </div>
+                                                </div>
+                                                <div className="flex items-center gap-1.5 rounded border border-blue-300 bg-blue-50 px-2 py-1 shadow-sm">
+                                                    <Factory size={12} className="text-blue-600" />
+                                                    <div className="flex flex-col leading-[0.8]">
+                                                        <span className="text-[8px] font-black uppercase text-blue-800">FDA</span>
+                                                        <span className="text-[7px] font-bold uppercase text-blue-700">Registered</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

@@ -11,8 +11,7 @@ export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(true);
 
   const handleConfirm = () => {
-    // Logic to redirect to Official Site
-    alert("Redirecting to Official Manufacturer Checkout...");
+    // Redirect to Official Site
     window.location.href = "https://thekerassentials.com/text.php?aff_id=1119055";
   };
 
