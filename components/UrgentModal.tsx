@@ -5,7 +5,7 @@ import { AlertTriangle, ShieldCheck, Ban, FileText, Lock, CalendarCheck, CheckCi
  * CONFIGURATION FOR ASPECT RATIO & SCALING
  */
 const BASE_WIDTH = 850;
-const BASE_HEIGHT = 550;
+const BASE_HEIGHT = 650;
 const ASPECT_RATIO = BASE_WIDTH / BASE_HEIGHT;
 
 // Margins "peek" to ensure background is visible
@@ -168,13 +168,13 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                     <div className="flex h-full w-full flex-col overflow-hidden rounded-xl bg-white shadow-2xl ring-1 ring-white/10">
 
                         {/* 1. HEADLINE - Compacted Padding */}
-                        <header className="shrink-0 bg-alert px-5 py-4 text-white shadow-md relative z-10 flex items-center justify-center gap-3">
+                        <header className="shrink-0 bg-alert px-5 py-3 text-white shadow-md relative z-10 flex items-center justify-center gap-3">
                             <AlertTriangle className="h-8 w-8 shrink-0 text-white" strokeWidth={2} />
-                            <div className="flex flex-row items-baseline gap-2 text-left">
-                                <h2 className="text-sm font-bold uppercase tracking-wide text-white leading-tight whitespace-nowrap">
+                            <div className="flex flex-row items-center gap-2 text-left">
+                                <h2 className="text-[20px] font-bold uppercase tracking-wide text-white leading-tight whitespace-nowrap">
                                     URGENT CONSUMER ALERT:
                                 </h2>
-                                <p className="text-xl font-black uppercase text-yellow-300 leading-none tracking-tight whitespace-nowrap">
+                                <p className="text-[28px] font-black uppercase text-yellow-300 leading-none tracking-tight whitespace-nowrap">
                                     2026 BATCH VERIFICATION
                                 </p>
                             </div>
@@ -182,7 +182,7 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
 
                         {/* 2. SECURITY CONTEXT - Compacted */}
                         <div className="shrink-0 bg-gray-900 px-4 py-1.5 text-center relative z-20 border-b border-gray-800">
-                            <p className="flex items-center justify-center gap-1.5 text-[10px] uppercase tracking-widest text-gray-400 font-semibold">
+                            <p className="flex items-center justify-center gap-1.5 text-[14px] uppercase tracking-widest text-gray-400 font-semibold">
                                 <CheckCircle2 className="h-3 w-3 text-blue-500" />
                                 <span>Official Product Identity:</span>
                                 <span className="text-white font-bold tracking-wider">Kerassentials™</span>
@@ -190,44 +190,44 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                         </div>
 
                         {/* 3. MAIN BODY - Flex Grow, No Scroll */}
-                        <div className="flex-1 flex flex-col justify-center gap-3 bg-gray-50 px-6 py-4">
+                        <div className="flex-1 flex flex-col justify-center gap-2 bg-gray-50 px-6 py-3">
 
                             {/* Top Warning Box - Reduced Margins/Padding */}
                             <div className="rounded-lg border border-gray-200 bg-white p-2.5 shadow-sm">
                                 <div className="mb-1.5 flex items-center gap-1.5 border-b border-gray-100 pb-1.5">
-                                    <FileText className="h-3.5 w-3.5 text-gray-500" />
-                                    <span className="text-[10px] font-bold uppercase tracking-wider text-gray-500">
+                                    <FileText className="h-3.5 w-3.5 text-gray-600" />
+                                    <span className="text-[14px] font-bold uppercase tracking-wider text-gray-600">
                                         Forensic Lab Report #992-A
                                     </span>
                                 </div>
                                 {/* Increased readability, adjusted line-height */}
-                                <p className="text-sm font-medium leading-normal text-gray-800">
+                                <p className="text-[20px] font-medium leading-normal text-gray-800">
                                     <span className="text-alert font-bold">CRITICAL:</span> Counterfeit bottles detected on Amazon & Walmart contain "inert oils" linked to severe chemical burns.
                                 </p>
                             </div>
 
-                            <p className="text-center text-sm font-semibold text-gray-600 leading-tight">
+                            <p className="text-center text-[20px] font-semibold text-gray-600 leading-tight">
                                 Secure the Deep-Penetrating Formula directly from the FDA-Registered Facility.
                             </p>
 
                             {/* Comparison Visuals - Grid Layout */}
-                            <div className="grid grid-cols-2 gap-4 items-stretch">
+                            <div className="grid grid-cols-2 gap-3 items-stretch">
 
                                 {/* BAD OPTION */}
-                                <div className="relative rounded-lg border border-red-200 bg-red-50 p-4 shadow-sm flex flex-col justify-start">
+                                <div className="relative rounded-lg border border-red-200 bg-red-50 p-3 shadow-sm flex flex-col justify-start">
                                     <div className="flex items-start gap-3">
                                         <div className="mt-0.5 rounded-full bg-red-100 p-1.5 shrink-0">
                                             <Ban className="h-5 w-5 text-red-600" />
                                         </div>
                                         <div className="flex flex-col gap-2">
-                                            <h3 className="text-sm font-bold text-red-800 leading-none">Third-Party Resellers</h3>
-                                            <p className="text-[11px] text-red-700 font-medium leading-tight m-0">(Amazon / eBay / Walmart)</p>
+                                            <h3 className="text-[20px] font-bold text-red-800 leading-none">Third-Party Resellers</h3>
+                                            <p className="text-[16px] text-red-700 font-medium leading-tight m-0">(Amazon / eBay / Walmart)</p>
                                             <ul className="m-0 p-0 space-y-1.5 mt-1">
-                                                <li className="text-xs leading-tight text-gray-700 flex items-start gap-1.5">
+                                                <li className="text-[17px] leading-tight text-gray-700 flex items-start gap-1.5">
                                                     <span className="text-red-500 font-bold">•</span>
                                                     <span>Risk of permanent damage.</span>
                                                 </li>
-                                                <li className="text-xs leading-tight text-gray-700 flex items-start gap-1.5">
+                                                <li className="text-[17px] leading-tight text-gray-700 flex items-start gap-1.5">
                                                     <span className="text-red-500 font-bold">•</span>
                                                     <span><span className="font-bold">NO</span> Refund Validity.</span>
                                                 </li>
@@ -237,8 +237,8 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                                 </div>
 
                                 {/* GOOD OPTION */}
-                                <div className="relative rounded-lg border-2 border-safe bg-green-50 p-4 shadow-md flex flex-col justify-start">
-                                    <div className="absolute right-0 top-0 rounded-bl-lg bg-safe px-2.5 py-1 text-[9px] font-bold uppercase text-white tracking-wide">
+                                <div className="relative rounded-lg border-2 border-safe bg-green-50 p-3 shadow-md flex flex-col justify-start">
+                                    <div className="absolute right-0 top-0 rounded-bl-lg bg-safe px-2.5 py-0.5 text-[13px] font-bold uppercase text-white tracking-wide">
                                         Recommended
                                     </div>
                                     <div className="flex items-start gap-3">
@@ -246,18 +246,18 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                                             <ShieldCheck className="h-5 w-5 text-safe" />
                                         </div>
                                         <div className="flex flex-col gap-2">
-                                            <h3 className="text-sm font-bold text-safe-dark leading-none">Official Manufacturer</h3>
-                                            <p className="text-[11px] text-safe font-medium leading-tight m-0">(Direct from Facility)</p>
+                                            <h3 className="text-[20px] font-bold text-safe-dark leading-none">Official Manufacturer</h3>
+                                            <p className="text-[16px] text-safe font-medium leading-tight m-0">(Direct from Facility)</p>
                                             <ul className="m-0 p-0 space-y-1.5 mt-1">
-                                                <li className="text-xs leading-tight text-gray-800 flex items-start gap-1.5">
+                                                <li className="text-[17px] leading-tight text-gray-800 flex items-start gap-1.5">
                                                     <span className="text-safe font-bold">•</span>
                                                     <span><strong>Fresh Batch Guarantee</strong>.</span>
                                                 </li>
-                                                <li className="text-xs leading-tight text-gray-800 flex items-start gap-1.5">
+                                                <li className="text-[17px] leading-tight text-gray-800 flex items-start gap-1.5">
                                                     <span className="text-safe font-bold">•</span>
                                                     <span>60-Day Money-Back Guarantee.</span>
                                                 </li>
-                                                <li className="text-xs leading-tight text-gray-800 flex items-start gap-1.5">
+                                                <li className="text-[17px] leading-tight text-gray-800 flex items-start gap-1.5">
                                                     <span className="text-safe font-bold">•</span>
                                                     <span>Use it all. If it fails, we refund you.*</span>
                                                 </li>
@@ -267,16 +267,16 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                                             <div className="mt-2.5 flex items-center gap-2">
                                                 <div className="flex items-center gap-1.5 rounded border border-yellow-300 bg-yellow-50 px-2 py-1 shadow-sm">
                                                     <Award size={12} className="text-yellow-600" />
-                                                    <div className="flex flex-col leading-[0.8]">
-                                                        <span className="text-[8px] font-black uppercase text-yellow-800">GMP</span>
-                                                        <span className="text-[7px] font-bold uppercase text-yellow-700">Certified</span>
+                                                    <div className="flex flex-col leading-[1.1]">
+                                                        <span className="text-[11px] font-black uppercase text-yellow-800">GMP</span>
+                                                        <span className="text-[10px] font-bold uppercase text-yellow-700">Certified</span>
                                                     </div>
                                                 </div>
                                                 <div className="flex items-center gap-1.5 rounded border border-blue-300 bg-blue-50 px-2 py-1 shadow-sm">
                                                     <Factory size={12} className="text-blue-600" />
-                                                    <div className="flex flex-col leading-[0.8]">
-                                                        <span className="text-[8px] font-black uppercase text-blue-800">FDA</span>
-                                                        <span className="text-[7px] font-bold uppercase text-blue-700">Registered</span>
+                                                    <div className="flex flex-col leading-[1.1]">
+                                                        <span className="text-[11px] font-black uppercase text-blue-800">FDA</span>
+                                                        <span className="text-[10px] font-bold uppercase text-blue-700">Registered</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -288,15 +288,15 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                         </div>
 
                         {/* 4. FOOTER - Fixed Height */}
-                        <footer className="shrink-0 border-t border-gray-200 bg-white px-6 pt-3 pb-4 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+                        <footer className="shrink-0 border-t border-gray-200 bg-white px-6 pt-2 pb-3 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
 
                             {/* Progress Bar */}
                             <div className="mb-2.5 w-full">
                                 <div className="mb-1 flex items-end justify-between px-0.5">
-                                    <span className="text-[10px] font-bold uppercase tracking-widest text-gray-500">
+                                    <span className="text-[14px] font-bold uppercase tracking-widest text-gray-600">
                                         Verifying Authenticity...
                                     </span>
-                                    <span className={`text-[10px] font-black uppercase tracking-widest ${isVerified ? 'text-safe' : 'text-gray-400'}`}>
+                                    <span className={`text-[14px] font-black uppercase tracking-widest ${isVerified ? 'text-safe' : 'text-gray-600'}`}>
                                         {progress}% Verified
                                     </span>
                                 </div>
@@ -320,18 +320,18 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                             >
                                 {isVerified ? (
                                     <>
-                                        <div className="absolute inset-0 animate-pulse bg-white/20"></div>
-                                        <span className="relative z-10 text-xl font-black uppercase tracking-wide text-white leading-none">
+                                        <div className="absolute inset-0 animate-pulse bg-white/10"></div>
+                                        <span className="relative z-10 text-[28px] font-black uppercase tracking-wide text-white leading-none">
                                             Activate Protection
                                         </span>
-                                        <span className="relative z-10 text-[10px] font-medium text-white opacity-90 mt-0.5">
+                                        <span className="relative z-10 text-[14px] font-medium text-white mt-0.5">
                                             & Order Securely
                                         </span>
                                     </>
                                 ) : (
                                     <div className="flex items-center gap-2">
                                         <Loader2 className="h-5 w-5 animate-spin text-white/80" />
-                                        <span className="text-lg font-bold uppercase tracking-wide text-white/90">
+                                        <span className="text-[25px] font-bold uppercase tracking-wide text-white/90">
                                             Please Wait...
                                         </span>
                                     </div>
@@ -341,7 +341,7 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                             {/* Bottom Meta */}
                             <div className="mt-2.5 flex items-center justify-between">
                                 {/* Badges */}
-                                <div className="flex items-center gap-3 text-[9px] font-bold uppercase tracking-tight text-gray-400">
+                                <div className="flex items-center gap-3 text-[13px] font-bold uppercase tracking-tight text-gray-600">
                                     <div className="flex items-center gap-1">
                                         <Lock size={9} strokeWidth={2.5} />
                                         <span>256-BIT SECURE</span>
@@ -353,10 +353,10 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                                 </div>
 
                                 {/* Session */}
-                                <div className="flex items-center gap-1.5 text-[9px] text-gray-400">
+                                <div className="flex items-center gap-1.5 text-[13px] text-gray-600">
                                     <span className="relative flex h-1.5 w-1.5">
                                         <span className={`absolute inline-flex h-full w-full rounded-full ${isVerified ? 'animate-ping bg-green-400' : 'bg-gray-400'} opacity-75`}></span>
-                                        <span className={`relative inline-flex h-1.5 w-1.5 rounded-full ${isVerified ? 'bg-green-500' : 'bg-gray-500'}`}></span>
+                                        <span className={`relative inline-flex h-1.5 w-1.5 rounded-full ${isVerified ? 'bg-green-500' : 'bg-green-500'}`}></span>
                                     </span>
                                     <span className="font-bold tracking-wider">
                                         {isVerified ? 'ONLINE' : 'CONNECTING...'}
