@@ -91,7 +91,7 @@ export default function ExitIntentPopup() {
     if (!isVisible) return null;
 
     return (
-        <div className="fixed inset-0 z-[20000] flex items-center justify-center overflow-hidden animate-fade-in" role="dialog" aria-modal="true">
+        <div className="fixed inset-0 z-[20000] flex items-center justify-center overflow-hidden animate-fade-in" role="dialog" aria-modal="true" aria-labelledby="exit-popup-title">
             {/* Backdrop */}
             <div
                 className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300"
@@ -120,7 +120,7 @@ export default function ExitIntentPopup() {
                             className="absolute right-5 top-5 z-20 rounded-full bg-gray-100 p-2 text-gray-500 hover:bg-gray-200 hover:text-gray-700 transition-colors"
                             aria-label="Close modal"
                         >
-                            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
@@ -128,7 +128,7 @@ export default function ExitIntentPopup() {
                         <div className="flex h-full flex-col p-8">
                             {/* Header / Title */}
                             <div className="mb-6 pr-8">
-                                <h2 className="text-[26px] font-bold text-gray-900 leading-tight">
+                                <h2 id="exit-popup-title" className="text-[26px] font-bold text-gray-900 leading-tight">
                                     Look, let’s be completely honest for a second…
                                 </h2>
                             </div>
@@ -167,7 +167,7 @@ export default function ExitIntentPopup() {
                                 </button>
 
                                 <div className="mt-3 flex justify-center items-center gap-2 text-[11px] font-bold text-gray-400 uppercase tracking-wider">
-                                    <svg className="h-3 w-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                                    <svg className="h-3 w-3" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
                                     <span>Verified Official Link</span>
                                 </div>
                             </div>

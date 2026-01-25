@@ -120,7 +120,7 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
     if (!isOpen) return null;
 
     return (
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden" aria-modal="true" role="dialog">
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden" aria-modal="true" role="dialog" aria-labelledby="modal-title">
             {/* 
         OPTIMIZED BACKGROUND (STATIC SCREENSHOT)
         - Replaced live iframe with static image for 80% faster load
@@ -140,7 +140,7 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                 <img
                     src="/background-hero.webp"
                     className="h-full w-full object-cover object-top"
-                    alt="Official Site Background"
+                    alt="Official Kerassentials Website Background showing product bottles"
                     width="1680"
                     height="1050"
                     fetchPriority="high"
@@ -174,13 +174,13 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                             <button
                                 onClick={onConfirm}
                                 className="absolute right-3 top-3 rounded-full bg-black/30 p-1.5 text-white shadow-lg transition-all hover:bg-black/60 hover:scale-110 active:scale-95"
-                                title="Close"
+                                aria-label="Close modal"
                             >
-                                <X size={20} strokeWidth={3} />
+                                <X size={20} strokeWidth={3} aria-hidden="true" />
                             </button>
-                            <AlertTriangle className="h-8 w-8 shrink-0 text-white" strokeWidth={2} />
+                            <AlertTriangle className="h-8 w-8 shrink-0 text-white" strokeWidth={2} aria-hidden="true" />
                             <div className="flex flex-row items-center gap-2 text-left">
-                                <h2 className="text-[20px] font-bold uppercase tracking-wide text-white leading-tight whitespace-nowrap">
+                                <h2 id="modal-title" className="text-[20px] font-bold uppercase tracking-wide text-white leading-tight whitespace-nowrap">
                                     URGENT CONSUMER ALERT:
                                 </h2>
                                 <p className="text-[28px] font-black uppercase text-yellow-300 leading-none tracking-tight whitespace-nowrap">
@@ -192,7 +192,7 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                         {/* 2. SECURITY CONTEXT - Compacted */}
                         <div className="shrink-0 bg-gray-900 px-4 py-1.5 text-center relative z-20 border-b border-gray-800">
                             <p className="flex items-center justify-center gap-1.5 text-[14px] uppercase tracking-widest text-gray-400 font-semibold">
-                                <CheckCircle2 className="h-3 w-3 text-blue-500" />
+                                <CheckCircle2 className="h-3 w-3 text-blue-500" aria-hidden="true" />
                                 <span>Official Product Identity:</span>
                                 <span className="text-white font-bold tracking-wider">Kerassentials™</span>
                             </p>
@@ -204,7 +204,7 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                             {/* Top Warning Box - Reduced Margins/Padding */}
                             <div className="rounded-lg border border-gray-200 bg-white p-2.5 shadow-sm">
                                 <div className="mb-1.5 flex items-center gap-1.5 border-b border-gray-100 pb-1.5">
-                                    <FileText className="h-3.5 w-3.5 text-gray-600" />
+                                    <FileText className="h-3.5 w-3.5 text-gray-600" aria-hidden="true" />
                                     <span className="text-[14px] font-bold uppercase tracking-wider text-gray-600">
                                         Independent Market Analysis
                                     </span>
@@ -226,7 +226,7 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                                 <div className="relative rounded-lg border border-red-200 bg-red-50 p-3 shadow-sm flex flex-col justify-start">
                                     <div className="flex items-start gap-3">
                                         <div className="mt-0.5 rounded-full bg-red-100 p-1.5 shrink-0">
-                                            <Ban className="h-5 w-5 text-red-600" />
+                                            <Ban className="h-5 w-5 text-red-600" aria-hidden="true" />
                                         </div>
                                         <div className="flex flex-col gap-2">
                                             <h3 className="text-[20px] font-bold text-red-800 leading-none">Third-Party Resellers</h3>
@@ -252,7 +252,7 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                                     </div>
                                     <div className="flex items-start gap-3">
                                         <div className="mt-0.5 rounded-full bg-green-100 p-1.5 shrink-0">
-                                            <ShieldCheck className="h-5 w-5 text-safe" />
+                                            <ShieldCheck className="h-5 w-5 text-safe" aria-hidden="true" />
                                         </div>
                                         <div className="flex flex-col gap-2">
                                             <h3 className="text-[20px] font-bold text-safe-dark leading-none">Official Manufacturer</h3>
@@ -275,14 +275,14 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                                             {/* Trust Badges */}
                                             <div className="mt-2.5 flex items-center gap-2">
                                                 <div className="flex items-center gap-1.5 rounded border border-yellow-300 bg-yellow-50 px-2 py-1 shadow-sm">
-                                                    <Award size={12} className="text-yellow-600" />
+                                                    <Award size={12} className="text-yellow-600" aria-hidden="true" />
                                                     <div className="flex flex-col leading-[1.1]">
                                                         <span className="text-[11px] font-black uppercase text-yellow-800">GMP</span>
                                                         <span className="text-[10px] font-bold uppercase text-yellow-700">Certified</span>
                                                     </div>
                                                 </div>
                                                 <div className="flex items-center gap-1.5 rounded border border-blue-300 bg-blue-50 px-2 py-1 shadow-sm">
-                                                    <Factory size={12} className="text-blue-600" />
+                                                    <Factory size={12} className="text-blue-600" aria-hidden="true" />
                                                     <div className="flex flex-col leading-[1.1]">
                                                         <span className="text-[11px] font-black uppercase text-blue-800">FDA</span>
                                                         <span className="text-[10px] font-bold uppercase text-blue-700">Registered</span>
@@ -339,7 +339,7 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                                     </>
                                 ) : (
                                     <div className="flex items-center gap-2">
-                                        <Loader2 className="h-5 w-5 animate-spin text-white/80" />
+                                        <Loader2 className="h-5 w-5 animate-spin text-white/80" aria-hidden="true" />
                                         <span className="text-[25px] font-bold uppercase tracking-wide text-white/90">
                                             Please Wait...
                                         </span>
@@ -352,11 +352,11 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                                 {/* Badges */}
                                 <div className="flex items-center gap-3 text-[13px] font-bold uppercase tracking-tight text-gray-600">
                                     <div className="flex items-center gap-1">
-                                        <Lock size={9} strokeWidth={2.5} />
+                                        <Lock size={9} strokeWidth={2.5} aria-hidden="true" />
                                         <span>256-BIT SECURE</span>
                                     </div>
                                     <div className="flex items-center gap-1">
-                                        <CalendarCheck size={9} strokeWidth={2.5} />
+                                        <CalendarCheck size={9} strokeWidth={2.5} aria-hidden="true" />
                                         <span>VERIFIED: {currentDate}</span>
                                     </div>
                                 </div>
@@ -374,7 +374,8 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                                     </div>
                                     <button
                                         onClick={onConfirm}
-                                        className="text-[13px] font-black uppercase tracking-widest text-gray-900 hover:text-alert transition-colors underline underline-offset-4 decoration-2"
+                                        className="text-[13px] font-black uppercase tracking-widest text-gray-900 hover:text-alert transition-colors underline underline-offset-4 decoration-2 p-3 -m-3"
+                                        aria-label="Close modal"
                                     >
                                         CLOSE
                                     </button>

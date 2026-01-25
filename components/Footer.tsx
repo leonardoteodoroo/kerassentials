@@ -11,17 +11,18 @@ const FooterSection: React.FC<{
     <div className="border-b border-gray-200 last:border-0">
         <button
             onClick={onToggle}
-            className="w-full flex items-center justify-between py-4 text-left group bg-gray-50 hover:bg-gray-100 transition-colors px-2 rounded"
+            aria-expanded={isOpen}
+            className="w-full flex items-center justify-between py-5 text-left group bg-gray-50 hover:bg-gray-100 transition-colors px-2 rounded min-h-[48px]"
         >
             <span className="text-gray-800 font-bold uppercase tracking-wider text-[11px] group-hover:text-blue-700">
                 {title}
             </span>
-            {isOpen ? <ChevronUp size={14} className="text-gray-500" /> : <ChevronDown size={14} className="text-gray-500" />}
+            {isOpen ? <ChevronUp size={14} className="text-gray-500" aria-hidden="true" /> : <ChevronDown size={14} className="text-gray-500" aria-hidden="true" />}
         </button>
         <div
             className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}
         >
-            <div className="pb-4 pt-1 text-[11px] leading-relaxed text-gray-600 px-2">
+            <div className="pb-4 pt-1 text-[11px] leading-relaxed text-gray-700 px-2">
                 {children}
             </div>
         </div>
@@ -184,7 +185,7 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="text-center w-full mt-6 pt-6 border-t border-gray-200 px-4">
-                <p className="text-[10px] text-gray-400">
+                <p className="text-[10px] text-gray-500">
                     &copy; {new Date().getFullYear()} Sempre na Moda. All Rights Reserved.
                 </p>
             </div>
