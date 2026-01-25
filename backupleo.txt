@@ -1,5 +1,5 @@
 BACKUP DE ALTERAÇÕES CRÍTICAS - COMPLIANCE GOOGLE ADS 2026
-Data: 25/01/2026
+Data: 25/01/2026 - 00:42
 Objetivo: Registro para reversão futura (caso necessário).
 
 ARQUIVO: components/UrgentModal.tsx
