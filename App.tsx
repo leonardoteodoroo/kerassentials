@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense, lazy } from 'react';
 import UrgentModal from './components/UrgentModal';
-import ExitIntentPopup from './components/ExitIntentPopup';
+
+const ExitIntentPopup = lazy(() => import('./components/ExitIntentPopup'));
 
 /**
  * App Component
@@ -64,10 +65,12 @@ export default function App() {
         onSecondaryAction={handleSecondary}
         onDismiss={handleDismiss}
       />
-      <ExitIntentPopup
-        triggerOpen={showExitPopup}
-        onClose={handleExitPopupClose}
-      />
+      <Suspense fallback={null}>
+        <ExitIntentPopup
+          triggerOpen={showExitPopup}
+          onClose={handleExitPopupClose}
+        />
+      </Suspense>
     </div>
   );
 }
