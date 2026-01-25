@@ -1,0 +1,27 @@
+BACKUP DE ALTERAÇÕES CRÍTICAS - COMPLIANCE GOOGLE ADS 2026
+Data: 25/01/2026
+Objetivo: Registro para reversão futura (caso necessário).
+
+ARQUIVO: components/UrgentModal.tsx
+-----------------------------------
+1. TÍTULO DO RELATÓRIO
+   DE: "Forensic Lab Report #992-A"
+   PARA: "Independent Market Analysis"
+
+2. DESCRIÇÃO DO DANO (SUBSTÂNCIA)
+   DE: "...contain 'inert oils' linked to severe chemical burns."
+   PARA: "...contain 'unknown fillers' linked to severe skin irritation."
+
+3. DESCRIÇÃO DO RISCO (RESULTADO)
+   DE: "Risk of permanent damage."
+   PARA: "Risk of ineffective results."
+
+ARQUIVO: components/ExitIntentPopup.tsx
+---------------------------------------
+1. TERMINOLOGIA DE VENDEDOR
+   DE: "...'red ocean' of unauthorized affiliates..."
+   PARA: "...'red ocean' of unauthorized sellers..."
+
+2. MOTIVAÇÃO DO VENDEDOR
+   DE: "...only about making a quick commission."
+   PARA: "...only about making a quick profit."

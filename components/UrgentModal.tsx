@@ -206,12 +206,12 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                                 <div className="mb-1.5 flex items-center gap-1.5 border-b border-gray-100 pb-1.5">
                                     <FileText className="h-3.5 w-3.5 text-gray-600" />
                                     <span className="text-[14px] font-bold uppercase tracking-wider text-gray-600">
-                                        Forensic Lab Report #992-A
+                                        Independent Market Analysis
                                     </span>
                                 </div>
                                 {/* Increased readability, adjusted line-height */}
                                 <p className="text-[20px] font-medium leading-normal text-gray-800">
-                                    <span className="text-alert font-bold">CRITICAL:</span> Counterfeit bottles detected on Amazon & Walmart contain "inert oils" linked to severe chemical burns.
+                                    <span className="text-alert font-bold">CRITICAL:</span> Counterfeit bottles detected on Amazon & Walmart contain "unknown fillers" linked to severe skin irritation.
                                 </p>
                             </div>
 
@@ -234,7 +234,7 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                                             <ul className="m-0 p-0 space-y-1.5 mt-1">
                                                 <li className="text-[17px] leading-tight text-gray-700 flex items-start gap-1.5">
                                                     <span className="text-red-500 font-bold">•</span>
-                                                    <span>Risk of permanent damage.</span>
+                                                    <span>Risk of ineffective results.</span>
                                                 </li>
                                                 <li className="text-[17px] leading-tight text-gray-700 flex items-start gap-1.5">
                                                     <span className="text-red-500 font-bold">•</span>

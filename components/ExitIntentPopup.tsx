@@ -136,7 +136,7 @@ export default function ExitIntentPopup() {
                             {/* Body Text */}
                             <div className="flex-1 space-y-5 text-[17px] text-gray-600 leading-relaxed font-medium">
                                 <p>
-                                    I know you’ve probably seen dozens of reviews and ads for <span className="font-bold text-gray-900">Kerassentials</span> today. The truth is, there’s a <span className="font-bold text-alert bg-red-50 px-1 rounded">'red ocean' of unauthorized affiliates</span> out there—people who don’t care about your health, only about making a quick commission.
+                                    I know you’ve probably seen dozens of reviews and ads for <span className="font-bold text-gray-900">Kerassentials</span> today. The truth is, there’s a <span className="font-bold text-alert bg-red-50 px-1 rounded">'red ocean' of unauthorized sellers</span> out there—people who don’t care about your health, only about making a quick profit.
                                 </p>
                                 <p>
                                     They flood the internet with <span className="italic">misleading information</span>, often leading well-intentioned people to buy <span className="font-bold text-alert">fake, diluted bottles</span> on Amazon, Walmart, or eBay.
