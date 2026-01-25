@@ -10,6 +10,7 @@ import ExitIntentPopup from './components/ExitIntentPopup';
 export default function App() {
   // Modal open by default to show background immediately
   const [isModalOpen, setIsModalOpen] = useState(true);
+  const [showExitPopup, setShowExitPopup] = useState(false);
 
   const handleConfirm = () => {
     // Redirect to Official Site
@@ -17,25 +18,56 @@ export default function App() {
   };
 
   const handleSecondary = () => {
-    // If user clicks secondary, we might want to close modal or redirect.
-    // For now, keeping it open or handling as specific logic.
     setIsModalOpen(false);
+  };
+
+  const handleDismiss = () => {
+    // When user tries to close the main modal via X or CLOSE,
+    // we close it and trigger the exit popup.
+    setIsModalOpen(false);
+    setShowExitPopup(true);
+  };
+
+  const handleExitPopupClose = () => {
+    // If the exit popup is closed, we bring back the urgent modal
+    setShowExitPopup(false);
+    setIsModalOpen(true);
   };
 
   return (
     <div className="min-h-screen bg-white font-sans text-gray-800">
       {/* 
-        The Application Container.
-        Since we removed the "Health Insider" dummy content,
-        this is just a wrapper for the Modal overlay.
+        PERSISTENT BACKGROUND
+        - Moved here so it stays visible when modals are swapped
       */}
+      <picture className="fixed inset-0 h-[100dvh] w-full z-0 pointer-events-none">
+        <source
+          media="(max-width: 767px)"
+          srcSet="/background-hero-mobile.webp"
+          width="500"
+          height="757"
+        />
+        <img
+          src="/background-hero.webp"
+          className="h-full w-full object-cover object-top"
+          alt="Official Kerassentials Website Background showing product bottles"
+          width="1680"
+          height="1050"
+          fetchPriority="high"
+        />
+      </picture>
+
       <UrgentModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         onConfirm={handleConfirm}
         onSecondaryAction={handleSecondary}
+        onDismiss={handleDismiss}
       />
-      <ExitIntentPopup />
+      <ExitIntentPopup
+        triggerOpen={showExitPopup}
+        onClose={handleExitPopupClose}
+      />
     </div>
   );
 }

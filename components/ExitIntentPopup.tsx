@@ -6,10 +6,23 @@ const BASE_HEIGHT = 760; // Fixed height to fit all content comfortably
 const ASPECT_RATIO = BASE_WIDTH / BASE_HEIGHT;
 const PEEK_MARGIN = 20;  // Margin to ensure it doesn't touch edges
 
-export default function ExitIntentPopup() {
+interface ExitIntentPopupProps {
+    triggerOpen?: boolean;
+    onClose?: () => void;
+}
+
+export default function ExitIntentPopup({ triggerOpen, onClose }: ExitIntentPopupProps) {
     const [isVisible, setIsVisible] = useState(false);
     const [hasTriggered, setHasTriggered] = useState(false);
     const [scale, setScale] = useState(1);
+
+    // Watch for external trigger
+    useEffect(() => {
+        if (triggerOpen && !isVisible) {
+            setIsVisible(true);
+            setHasTriggered(true);
+        }
+    }, [triggerOpen, isVisible]);
 
     // Constants
     const TARGET_URL = "https://thekerassentials.com/text.php?aff_id=1119055";
@@ -82,6 +95,7 @@ export default function ExitIntentPopup() {
 
     const handleClose = () => {
         setIsVisible(false);
+        if (onClose) onClose();
     };
 
     const handleCTA = () => {

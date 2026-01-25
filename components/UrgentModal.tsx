@@ -19,6 +19,7 @@ interface UrgentModalProps {
     onClose: () => void;
     onConfirm: () => void;
     onSecondaryAction: () => void;
+    onDismiss: () => void;
 }
 
 const UrgentModal: React.FC<UrgentModalProps> = ({
@@ -26,6 +27,7 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
     onClose,
     onConfirm,
     onSecondaryAction,
+    onDismiss,
 }) => {
     const [scale, setScale] = useState(1);
     const [currentDate, setCurrentDate] = useState('');
@@ -121,32 +123,6 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
 
     return (
         <div className="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden" aria-modal="true" role="dialog" aria-labelledby="modal-title">
-            {/* 
-        OPTIMIZED BACKGROUND (STATIC SCREENSHOT)
-        - Replaced live iframe with static image for 80% faster load
-        - High-quality first-fold capture provides perfect context
-      */}
-            {/* 
-        OPTIMIZED BACKGROUND (RESPONSIVE)
-        - Uses picture element to switch between desktop and mobile screenshots
-      */}
-            <picture className="absolute inset-0 h-[100dvh] w-full z-0 pointer-events-none">
-                <source
-                    media="(max-width: 767px)"
-                    srcSet="/background-hero-mobile.webp"
-                    width="500"
-                    height="757"
-                />
-                <img
-                    src="/background-hero.webp"
-                    className="h-full w-full object-cover object-top"
-                    alt="Official Kerassentials Website Background showing product bottles"
-                    width="1680"
-                    height="1050"
-                    fetchPriority="high"
-                />
-            </picture>
-
             {/* BACKDROP - Lightened for visibility */}
             <div className="absolute inset-0 z-10 bg-black/40 backdrop-blur-[3px] transition-all duration-300" />
 
@@ -172,7 +148,7 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                         <header className="shrink-0 bg-alert px-5 py-3 text-white shadow-md relative z-10 flex items-center justify-center gap-3">
                             {/* Close button that redirects */}
                             <button
-                                onClick={onConfirm}
+                                onClick={onDismiss}
                                 className="absolute right-3 top-3 rounded-full bg-black/30 p-1.5 text-white shadow-lg transition-all hover:bg-black/60 hover:scale-110 active:scale-95"
                                 aria-label="Close modal"
                             >
@@ -373,7 +349,7 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                                         </span>
                                     </div>
                                     <button
-                                        onClick={onConfirm}
+                                        onClick={onDismiss}
                                         className="relative text-[13px] font-black uppercase tracking-widest text-gray-900 hover:text-alert transition-colors underline underline-offset-4 decoration-2 p-4 -m-4"
                                         aria-label="Close modal"
                                     >
