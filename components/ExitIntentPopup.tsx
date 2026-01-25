@@ -105,10 +105,10 @@ export default function ExitIntentPopup({ triggerOpen, onClose }: ExitIntentPopu
     if (!isVisible) return null;
 
     return (
-        <div className="fixed inset-0 z-[20000] flex items-center justify-center overflow-hidden animate-fade-in" role="dialog" aria-modal="true" aria-labelledby="exit-popup-title">
+        <div className="fixed inset-0 z-[20000] flex items-center justify-center overflow-hidden" role="dialog" aria-modal="true" aria-labelledby="exit-popup-title">
             {/* Backdrop */}
             <div
-                className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300"
+                className="absolute inset-0 bg-black/40 backdrop-blur-[3px] transition-all duration-300"
                 onClick={handleClose}
             />
 
