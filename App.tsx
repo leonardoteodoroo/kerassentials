@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import UrgentModal from './components/UrgentModal';
+import ExitIntentPopup from './components/ExitIntentPopup';
 
 /**
  * App Component
@@ -34,6 +35,7 @@ export default function App() {
         onConfirm={handleConfirm}
         onSecondaryAction={handleSecondary}
       />
+      <ExitIntentPopup />
     </div>
   );
 }

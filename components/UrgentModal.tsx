@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
 import { AlertTriangle, ShieldCheck, Ban, FileText, Lock, CalendarCheck, CheckCircle2, Loader2, Award, Factory, X } from 'lucide-react';
+import Footer from './Footer';
 
 /**
  * CONFIGURATION FOR ASPECT RATIO & SCALING
@@ -164,8 +165,8 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                     }}
                     className="pointer-events-auto relative shrink-0 origin-center shadow-2xl transition-transform duration-200 ease-out"
                 >
-                    {/* CARD CONTENT - Fixed Layout (No Scroll) */}
-                    <div className="flex h-full w-full flex-col overflow-hidden rounded-xl bg-white shadow-2xl ring-1 ring-white/10">
+                    {/* CARD CONTENT - Scrollable Layout for Compliance */}
+                    <div className="flex h-full w-full flex-col overflow-y-auto overflow-x-hidden rounded-xl bg-white shadow-2xl ring-1 ring-white/10 custom-scrollbar">
 
                         {/* 1. HEADLINE - Compacted Padding */}
                         <header className="shrink-0 bg-alert px-5 py-3 text-white shadow-md relative z-10 flex items-center justify-center gap-3">
@@ -381,6 +382,11 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                             </div>
 
                         </footer>
+
+                        {/* 5. COMPLIANCE FOOTER (Scrollable area) */}
+                        <div className="border-t border-gray-200 bg-gray-50">
+                            <Footer />
+                        </div>
                     </div>
                 </div>
             </div>
