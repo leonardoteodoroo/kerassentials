@@ -374,7 +374,7 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                                     </div>
                                     <button
                                         onClick={onConfirm}
-                                        className="text-[13px] font-black uppercase tracking-widest text-gray-900 hover:text-alert transition-colors underline underline-offset-4 decoration-2 p-3 -m-3"
+                                        className="relative text-[13px] font-black uppercase tracking-widest text-gray-900 hover:text-alert transition-colors underline underline-offset-4 decoration-2 p-4 -m-4"
                                         aria-label="Close modal"
                                     >
                                         CLOSE
