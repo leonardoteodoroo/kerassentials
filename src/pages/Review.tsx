@@ -198,7 +198,7 @@ export default function Review() {
                                     <div className="flex text-yellow-500">★★★★★</div>
                                     <span className="text-xs text-slate-400 flex items-center"><Check className="w-3 h-3 mr-1" /> Verified</span>
                                 </div>
-                                <p className="text-slate-700 italic mb-4">"{review.text}"</p>
+                                <p className="text-slate-700 italic mb-4">{review.text}</p>
                                 <div className="flex items-center gap-3">
                                     <div className="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center text-slate-500 font-bold">
                                         {review.name.charAt(0)}
