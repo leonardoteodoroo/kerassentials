@@ -6,7 +6,7 @@ import Footer from './Footer';
  * CONFIGURATION FOR ASPECT RATIO & SCALING
  */
 const BASE_WIDTH = 850;
-const BASE_HEIGHT = 710;
+const BASE_HEIGHT = 725;
 const ASPECT_RATIO = BASE_WIDTH / BASE_HEIGHT;
 
 // Margins "peek" to ensure background is visible
@@ -274,7 +274,7 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                         </div>
 
                         {/* 4. FOOTER - Fixed Height */}
-                        <footer className="shrink-0 border-t border-gray-200 bg-white px-6 pt-2 pb-3 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+                        <footer className="shrink-0 border-t border-gray-200 bg-white px-6 py-3 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
 
                             {/* Progress Bar */}
                             <div className="mb-2.5 w-full">
@@ -327,7 +327,7 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                             {/* Feedback Button */}
                             <button
                                 onClick={onSecondaryAction}
-                                className="mt-3 w-full rounded-full border border-yellow-500 bg-yellow-400 py-2 text-[16px] font-black uppercase tracking-widest text-gray-900 shadow-sm transition-all hover:bg-yellow-300 active:scale-95"
+                                className="mt-2.5 w-full rounded-full border border-yellow-500 bg-yellow-400 py-3.5 text-[16px] font-black uppercase tracking-widest text-gray-900 shadow-sm transition-all hover:bg-yellow-300 active:scale-95"
                             >
                                 KERASSENTIALS REVIEWS
                             </button>
@@ -359,7 +359,7 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                                     </div>
                                     <button
                                         onClick={onDismiss}
-                                        className="relative text-[13px] font-black uppercase tracking-widest text-gray-900 hover:text-alert transition-colors underline underline-offset-4 decoration-2 p-4 -m-4"
+                                        className="flex items-center justify-center h-[44px] px-2 text-[13px] font-black uppercase tracking-widest text-gray-900 hover:text-alert transition-colors underline underline-offset-4 decoration-2"
                                         aria-label="Close modal"
                                     >
                                         CLOSE
