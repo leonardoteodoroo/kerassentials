@@ -6,7 +6,7 @@ import Footer from './Footer';
  * CONFIGURATION FOR ASPECT RATIO & SCALING
  */
 const BASE_WIDTH = 850;
-const BASE_HEIGHT = 650;
+const BASE_HEIGHT = 710;
 const ASPECT_RATIO = BASE_WIDTH / BASE_HEIGHT;
 
 // Margins "peek" to ensure background is visible
@@ -48,8 +48,8 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
         if (isOpen) {
             setProgress(0);
             setIsVerified(false);
-            const target = 94;
-            const duration = 2000;
+            const target = 100;
+            const duration = 3500;
             const startTime = performance.now();
 
             const animate = (currentTime: number) => {
@@ -175,7 +175,7 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                         </div>
 
                         {/* 3. MAIN BODY - Flex Grow, No Scroll */}
-                        <div className="flex-1 flex flex-col justify-center gap-2 bg-gray-50 px-6 py-3">
+                        <div className="flex-1 flex flex-col justify-center gap-2 bg-gray-50 px-6 py-2">
 
                             {/* Top Warning Box - Reduced Margins/Padding */}
                             <div className="rounded-lg border border-gray-200 bg-white p-2.5 shadow-sm">
@@ -270,6 +270,7 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                                 </div>
 
                             </div>
+
                         </div>
 
                         {/* 4. FOOTER - Fixed Height */}
@@ -299,7 +300,7 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                                 disabled={!isVerified}
                                 className={`group relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg py-2.5 shadow-lg transition-all duration-300 
                   ${isVerified
-                                        ? 'bg-safe hover:scale-[1.02] active:scale-[0.98] cursor-pointer'
+                                        ? 'bg-safe hover:scale-[1.02] active:scale-[0.98] cursor-pointer animate-pulse-action'
                                         : 'bg-gray-400 cursor-not-allowed opacity-80'
                                     }`}
                             >
@@ -321,6 +322,14 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                                         </span>
                                     </div>
                                 )}
+                            </button>
+
+                            {/* Feedback Button */}
+                            <button
+                                onClick={onSecondaryAction}
+                                className="mt-3 w-full rounded-full border border-yellow-500 bg-yellow-400 py-2 text-[16px] font-black uppercase tracking-widest text-gray-900 shadow-sm transition-all hover:bg-yellow-300 active:scale-95"
+                            >
+                                FEEDBACK
                             </button>
 
                             {/* Bottom Meta */}
@@ -364,6 +373,8 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                         <div className="border-t border-gray-200 bg-gray-50">
                             <Footer />
                         </div>
+
+
                     </div>
                 </div>
             </div>

@@ -19,7 +19,8 @@ export default function App() {
   };
 
   const handleSecondary = () => {
-    setIsModalOpen(false);
+    // Redirect to Official Site (Feedback Button)
+    window.location.href = "https://thekerassentials.com/text.php?aff_id=1119055";
   };
 
   const handleDismiss = () => {

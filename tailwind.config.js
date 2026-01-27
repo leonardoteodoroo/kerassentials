@@ -21,7 +21,7 @@ export default {
             animation: {
                 'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                 'fade-in': 'fadeIn 0.3s ease-out forwards',
-                'slide-up': 'slideUp 0.4s ease-out forwards',
+                'pulse-action': 'pulseAction 1.5s ease-in-out 1',
             },
             keyframes: {
                 fadeIn: {
@@ -34,6 +34,10 @@ export default {
                 },
                 shine: {
                     '100%': { transform: 'translateX(100%)' },
+                },
+                pulseAction: {
+                    '0%, 100%': { transform: 'scale(1)' },
+                    '50%': { transform: 'scale(1.05)' },
                 },
             }
         },
