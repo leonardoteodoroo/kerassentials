@@ -329,7 +329,7 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                                 onClick={onSecondaryAction}
                                 className="mt-3 w-full rounded-full border border-yellow-500 bg-yellow-400 py-2 text-[16px] font-black uppercase tracking-widest text-gray-900 shadow-sm transition-all hover:bg-yellow-300 active:scale-95"
                             >
-                                FEEDBACK
+                                KERASSENTIALS REVIEWS
                             </button>
 
                             {/* Bottom Meta */}
