@@ -108,8 +108,8 @@ export default function Review() {
                                         <ShieldCheck className="w-3 h-3" /> Verified Purchase
                                     </span>
                                 </div>
-                                <h4 className="font-bold text-slate-900 mb-2">"{review.quote}"</h4>
-                                <p className="text-sm text-slate-600 leading-relaxed mb-4">"{review.text}"</p>
+                                <h4 className="font-bold text-slate-900 mb-2">{review.quote}</h4>
+                                <p className="text-sm text-slate-600 leading-relaxed mb-4">{review.text}</p>
                                 <div className="flex items-center justify-between mt-auto">
                                     <span className="text-sm font-semibold text-slate-900">{review.name}</span>
                                     <div className="flex items-center text-xs text-slate-400">
