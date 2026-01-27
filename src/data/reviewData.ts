@@ -61,7 +61,61 @@ export const SCIENCE_SECTION = {
     ]
 };
 
-export const REVIEWS = [
+// 7 SHORT REVIEWS (Top of Page)
+export const SHORT_REVIEWS = [
+    {
+        name: "Sarah Jenkins",
+        age: 34,
+        location: "Seattle, WA",
+        quote: "Finally Clear Nails Again",
+        text: "I almost gave up after buying a 'cheap' bottle on Amazon that looked like cooking oil. I only realized the difference when I received the Authorized Batch from the official site. The texture and aroma are completely different. Don't risk your health for a $10 difference."
+    },
+    {
+        name: "Michael Thompson",
+        age: 47,
+        location: "Phoenix, AZ",
+        quote: "Worth Every Drop",
+        text: "After 3 years of hiding my feet in socks, I was the biggest skeptic. But the science of Tea Tree and Clove oils here is real. It wasn't an overnight miracle, but for the first time in years, the yellow spot is receding."
+    },
+    {
+        name: "Linda Walker",
+        age: 52,
+        location: "Boston, MA",
+        quote: "Slow but Real Results",
+        text: "My biggest fear was the refund. I bought it with hesitation, but the official site support was impeccable. I ended up not even needing the 60-day guarantee because the product delivers exactly what it promises."
+    },
+    {
+        name: "Christopher Dave",
+        age: 39,
+        location: "Orlando, FL",
+        quote: "Natural and Effective",
+        text: "It seems silly, but being able to wear sandals at a BBQ without feeling ashamed changed my summer. Application takes 30 seconds and has no side effects like the pills I used to take."
+    },
+    {
+        name: "Jennifer Wilson",
+        age: 45,
+        location: "Austin, TX",
+        quote: "Confidence Restored",
+        text: "As a nurse, I analyze labels. Most oils don't penetrate the nail bed. This 8-ingredient formula was the only one that really 'absorbed'. Follow the application protocol and results will appear."
+    },
+    {
+        name: "James H.",
+        age: 60,
+        location: "Chicago, IL",
+        quote: "Best Alternative to Prescriptions",
+        text: "I spent hundreds of dollars on pharmacy solutions that never worked. The 72.63% discount on the 6-bottle kit was the best investment I made to stop wasting money on things that don't solve it."
+    },
+    {
+        name: "Ashley Smith",
+        age: 29,
+        location: "New York, NY",
+        quote: "Trust the Original",
+        text: "I saw the report on the 14,357+ satisfied users and decided to give it one last chance. If you are in doubt, just make sure you are on the official site. The original is the only one that has the 2026 factory seal."
+    }
+];
+
+// 6 DETAILED REVIEWS (Middle/Bottom of Page)
+export const DETAILED_REVIEWS = [
     {
         title: "The Victory Over Hiding",
         name: "Emily R.",

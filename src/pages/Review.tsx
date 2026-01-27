@@ -3,7 +3,7 @@ import { Star, Check, ShieldCheck, MapPin, ChevronDown, ChevronUp, Lock, Truck, 
 import Footer from '../components/Footer';
 import {
     AFFILIATE_LINK, HERO_CONTENT, PROBLEM_SECTION, SOLUTION_SECTION,
-    INGREDIENTS, SCIENCE_SECTION, REVIEWS, PROS_CONS, FAQS, REFERENCES, POLICY_TEXT
+    INGREDIENTS, SCIENCE_SECTION, SHORT_REVIEWS, DETAILED_REVIEWS, PROS_CONS, FAQS, REFERENCES, POLICY_TEXT
 } from '../data/reviewData';
 
 export default function Review() {
@@ -91,55 +91,27 @@ export default function Review() {
                 </div>
             </section>
 
-            {/* FEATURED REVIEWS (ALL) */}
+            {/* SHORT REVIEWS SECTON (TOP) */}
             <section className="bg-slate-50 py-12 border-b border-slate-200">
                 <div className="max-w-7xl mx-auto px-4">
-                    <h3 className="text-center text-slate-500 font-semibold uppercase tracking-wider mb-8 text-sm">🛡️ Verified User Intelligence</h3>
-                    <div className="grid md:grid-cols-2 gap-6">
-                        {REVIEWS.map((review, idx) => (
-                            <div key={idx} className="contents">
-                                <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex flex-col h-full relative">
-                                    <div className="flex items-center gap-2 mb-3">
-                                        <div className="flex text-yellow-400">★★★★★</div>
-                                        <span className="text-xs font-bold text-emerald-600 px-2 py-0.5 bg-emerald-50 rounded-full flex items-center gap-1">
-                                            <ShieldCheck className="w-3 h-3" /> Verified Purchase
-                                        </span>
-                                    </div>
-                                    {/* Title with styling */}
-                                    <h4 className="font-bold text-slate-900 mb-2 italic text-lg">{review.title}</h4>
-
-                                    <p className="text-sm text-slate-600 leading-relaxed mb-4 flex-grow">{review.text}</p>
-
-                                    <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
-                                        <span className="text-sm font-semibold text-slate-900">{review.name}</span>
-                                        <div className="flex items-center text-xs text-slate-400">
-                                            <MapPin className="w-3 h-3 mr-1" /> {review.location}
-                                        </div>
+                    <h3 className="text-center text-slate-500 font-semibold uppercase tracking-wider mb-8 text-sm">Verified Reviews from Verified Buyers</h3>
+                    <div className="grid md:grid-cols-3 gap-6">
+                        {SHORT_REVIEWS.map((review, idx) => (
+                            <div key={idx} className="bg-white p-6 rounded-xl shadow-sm border border-slate-100 relative">
+                                <div className="flex items-center gap-2 mb-3">
+                                    <div className="flex text-yellow-400">★★★★★</div>
+                                    <span className="text-xs font-bold text-emerald-600 px-2 py-0.5 bg-emerald-50 rounded-full flex items-center gap-1">
+                                        <ShieldCheck className="w-3 h-3" /> Verified Purchase
+                                    </span>
+                                </div>
+                                <h4 className="font-bold text-slate-900 mb-2">{review.quote}</h4>
+                                <p className="text-sm text-slate-600 leading-relaxed mb-4">{review.text}</p>
+                                <div className="flex items-center justify-between mt-auto">
+                                    <span className="text-sm font-semibold text-slate-900">{review.name}</span>
+                                    <div className="flex items-center text-xs text-slate-400">
+                                        <MapPin className="w-3 h-3 mr-1" /> {review.location}
                                     </div>
                                 </div>
-
-                                {/* Insert Button after specific items (Visual check: idx 1 (2nd item), idx 3 (4th item), idx 5 (6th item)) */}
-                                {idx === 1 && (
-                                    <div className="md:col-span-2 text-center py-6">
-                                        <a href={AFFILIATE_LINK} className="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all uppercase text-sm md:text-base animate-pulse">
-                                            ➔ CHECK OFFICIAL BATCH AVAILABILITY (72.63% OFF)
-                                        </a>
-                                    </div>
-                                )}
-                                {idx === 3 && (
-                                    <div className="md:col-span-2 text-center py-6">
-                                        <a href={AFFILIATE_LINK} className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all uppercase text-sm md:text-base animate-pulse">
-                                            ➔ SECURE YOUR AUTHORIZED BOTTLE NOW
-                                        </a>
-                                    </div>
-                                )}
-                                {idx === 5 && (
-                                    <div className="md:col-span-2 text-center py-6">
-                                        <a href={AFFILIATE_LINK} className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all uppercase text-sm md:text-base animate-pulse">
-                                            ➔ GET THE OFFICIAL DISCOUNT & 60-DAY GUARANTEE
-                                        </a>
-                                    </div>
-                                )}
                             </div>
                         ))}
                     </div>
@@ -170,8 +142,60 @@ export default function Review() {
                 </div>
             </section>
 
-            {/* INGREDIENTS */}
+            {/* DETAILED STORIES (MIDDLE SECTION) */}
             <section className="py-16 px-4 bg-slate-50 border-y border-slate-200">
+                <div className="max-w-5xl mx-auto">
+                    <h3 className="text-center text-3xl font-bold text-slate-900 mb-12">🛡️ Verified User Intelligence & Success Stories</h3>
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {DETAILED_REVIEWS.map((review, idx) => (
+                            <div key={idx} className="contents">
+                                <div className="bg-white p-8 rounded-xl shadow-lg border border-slate-100 flex flex-col h-full relative">
+                                    <div className="flex items-center gap-2 mb-4">
+                                        <div className="flex text-yellow-400">★★★★★</div>
+                                        <span className="text-xs font-bold text-emerald-600 px-2 py-0.5 bg-emerald-50 rounded-full flex items-center gap-1">
+                                            <ShieldCheck className="w-3 h-3" /> Verified Purchase
+                                        </span>
+                                    </div>
+                                    <h4 className="font-bold text-slate-800 mb-3 italic text-xl">{review.title}</h4>
+                                    <p className="text-base text-slate-600 leading-relaxed mb-6 flex-grow">{review.text}</p>
+                                    <div className="flex items-center justify-between mt-auto pt-6 border-t border-slate-100">
+                                        <span className="font-bold text-slate-900">{review.name}</span>
+                                        <div className="flex items-center text-xs text-slate-500">
+                                            <MapPin className="w-3 h-3 mr-1" /> {review.location}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Insert Button after specific items (idx 1 (2nd), idx 3 (4th), idx 5 (6th)) */}
+                                {idx === 1 && (
+                                    <div className="md:col-span-2 text-center py-8">
+                                        <a href={AFFILIATE_LINK} className="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-10 rounded-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all uppercase text-sm md:text-lg animate-pulse">
+                                            ➔ CHECK OFFICIAL BATCH AVAILABILITY (72.63% OFF)
+                                        </a>
+                                    </div>
+                                )}
+                                {idx === 3 && (
+                                    <div className="md:col-span-2 text-center py-8">
+                                        <a href={AFFILIATE_LINK} className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-10 rounded-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all uppercase text-sm md:text-lg animate-pulse">
+                                            ➔ SECURE YOUR AUTHORIZED BOTTLE NOW
+                                        </a>
+                                    </div>
+                                )}
+                                {idx === 5 && (
+                                    <div className="md:col-span-2 text-center py-8">
+                                        <a href={AFFILIATE_LINK} className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all uppercase text-sm md:text-lg animate-pulse">
+                                            ➔ GET THE OFFICIAL DISCOUNT & 60-DAY GUARANTEE
+                                        </a>
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* INGREDIENTS */}
+            <section className="py-16 px-4 bg-white border-y border-slate-200">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center max-w-3xl mx-auto mb-12">
                         <h2 className="text-3xl font-bold text-slate-900 mb-4">Inside Every Drop: Simple, Natural Science</h2>
@@ -179,7 +203,7 @@ export default function Review() {
                     </div>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {INGREDIENTS.map((ing, i) => (
-                            <div key={i} className="bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow text-center">
+                            <div key={i} className="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow text-center">
                                 <div className="w-16 h-16 mx-auto bg-emerald-100 rounded-full flex items-center justify-center mb-4 text-emerald-600 font-bold text-xl">
                                     {ing.name.charAt(0)}
                                 </div>
