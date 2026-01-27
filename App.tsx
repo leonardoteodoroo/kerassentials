@@ -24,15 +24,13 @@ export default function App() {
 
   const handleDismiss = () => {
     // When user tries to close the main modal via X or CLOSE,
-    // we close it and trigger the exit popup.
-    setIsModalOpen(false);
+    // we TRIGGER the exit popup ON TOP. We do NOT close the main modal.
     setShowExitPopup(true);
   };
 
   const handleExitPopupClose = () => {
-    // If the exit popup is closed, we bring back the urgent modal
+    // Just close the exit popup. Do NOT reopen the main modal.
     setShowExitPopup(false);
-    setIsModalOpen(true);
   };
 
   return (
