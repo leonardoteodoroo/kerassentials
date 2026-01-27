@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Review() {
     return (
-        <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4">
+        <main className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4">
             <div className="max-w-2xl w-full bg-white shadow-xl rounded-lg p-8">
                 <h1 className="text-3xl font-bold text-gray-900 mb-6">Customer Reviews</h1>
                 <p className="text-gray-600 mb-8">
@@ -27,6 +27,6 @@ export default function Review() {
                     </a>
                 </div>
             </div>
-        </div>
+        </main>
     );
 }

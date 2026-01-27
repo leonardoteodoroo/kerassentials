@@ -36,7 +36,7 @@ export default function Home() {
     };
 
     return (
-        <div className="min-h-screen bg-white font-sans text-gray-800">
+        <main className="min-h-screen bg-white font-sans text-gray-800">
             {/* 
         PERSISTENT BACKGROUND
         - Moved here so it stays visible when modals are swapped
@@ -71,6 +71,6 @@ export default function Home() {
                     onClose={handleExitPopupClose}
                 />
             </Suspense>
-        </div>
+        </main>
     );
 }
