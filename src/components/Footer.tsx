@@ -48,11 +48,11 @@ const Footer: React.FC = () => {
                 >
                     <div className="flex flex-col gap-2">
                         <p className="font-semibold text-gray-800">Sempre na Moda</p>
-                        <p>CNPJ: 41.024.752/0001-70</p>
+                        <p>Tax ID: 41.024.752/0001-70</p>
                         <p>
                             Email: <a href="mailto:sac@semprenamoda.com.br" className="text-blue-600 hover:underline">sac@semprenamoda.com.br</a>
                         </p>
-                        <p>Address: Rua 14, 516 - Jardim Goiás, Goiânia-GO, Brazil.</p>
+
                         <p>Business Hours: Mon-Fri 09:00 - 20:00 (BRT).</p>
                     </div>
                 </FooterSection>

@@ -50,7 +50,7 @@ export const INGREDIENTS = [
 ];
 
 export const SCIENCE_SECTION = {
-    title: "2026 – New Scientific Discovery",
+    title: "The Kerassentials",
     content: [
         "If you have been struggling for months or years with toenail itching and foul smell...",
         "Trying gels, creams and pills but with no real results...",
@@ -156,36 +156,117 @@ export const DETAILED_REVIEWS = [
 
 export const PROS_CONS = {
     pros: [
-        { title: "Natural, Gentle Formula", text: "Kerassentials is made with plant-based ingredients, making it a gentle option for daily use without harsh chemicals or burning sensations." },
-        { title: "Easy Topical Application", text: "The oil is applied directly to the nails and surrounding skin, fitting easily into a daily routine without mess or inconvenience." },
-        { title: "Targets the Root Cause", text: "Instead of only masking symptoms, Kerassentials helps create an environment where fungus struggles to survive." },
-        { title: "Supports Healthier Nails", text: "With consistent use, many users report clearer, smoother, and stronger-looking nails over time." },
-        { title: "No Prescription Required", text: "Kerassentials offers a non-invasive alternative for those who want to avoid oral medications." }
+        { title: "You Value Natural Phytochemistry", text: "You are tired of 'masking' symptoms with chemical paints and want a plant-based formula that creates an environment where fungus cannot survive." },
+        { title: "You Prefer a 30-Second Routine", text: "You want to avoid the liver-straining side effects of oral medications. Our topical oil fits into your day immediately after your shower—when your nail protein is most receptive." },
+        { title: "You Are a 'Scientific Realist'", text: "You understand that biological nail renewal isn't a 'magic trick.' You are ready to join the 14,357+ verified users who committed to a full cycle of restoration." },
+        { title: "You Demand Total Authenticity", text: "You refuse to risk your health with unverified bottles from Amazon or Walmart. You want the peace of mind that only comes from our FDA-Registered and GMP-Certified facility." }
     ],
     cons: [
-        { title: "Requires Consistent Use", text: "Results are not instant. Daily application over several weeks is necessary to see visible improvement." },
-        { title: "Works Gradually", text: "Kerassentials supports natural nail recovery, so it may take time depending on the severity of the fungal issue." },
-        { title: "Online Purchase Only", text: "The product is mainly available through the official website, which may not appeal to those who prefer in-store buying." },
-        { title: "Not a Medical Treatment", text: "Kerassentials is a natural supplement oil and not intended to diagnose, treat, or cure medical conditions." }
+        { title: "You Are Seeking an 'Overnight Miracle'", text: "Biology doesn't work that way. If you expect your nails to be crystal clear by tomorrow morning, this isn't for you. Our formula works gradually to ensure long-term health." },
+        { title: "You Are Not Consistent", text: "Results require daily application. If you aren't ready to spend 30 seconds a day on your health, you will likely be disappointed. We only want customers who take their recovery seriously." },
+        { title: "You Prefer 'Bargain Hunting' Over Safety", text: "We do not sell in local stores or marketplaces to prevent the circulation of diluted batches. We ship exclusively from our warehouse to guarantee the integrity of the Authorized 2026 Batch." },
+        { title: "You Want a Prescription Drug", text: "Kerassentials is a potent blend of natural oils and vitamins. It is a natural support system, not a synthetic chemical drug." }
     ]
 };
 
+export const PRICING_OPTIONS = [
+    {
+        id: 'basic',
+        title: 'Basic',
+        bottleCount: 2,
+        totalBottles: 2,
+        supply: '60 Day Supply',
+        pricePerBottle: 79,
+        totalPrice: 158,
+        originalPrice: 358,
+        savings: 200,
+        shipping: 9.99,
+        isBestValue: false,
+        isMostPopular: false,
+        features: ['60 Days Guarantee']
+    },
+    {
+        id: 'best-value',
+        title: 'Best Value!',
+        bottleCount: 3,
+        freeBottles: 3,
+        totalBottles: 6,
+        supply: '180 Day Supply',
+        pricePerBottle: 49,
+        totalPrice: 294,
+        originalPrice: 1074,
+        savings: 780,
+        shipping: 0,
+        isBestValue: true,
+        isMostPopular: false,
+        features: ['Biggest Discount', '60 Days Guarantee', '3 FREE Ebooks!', 'Surprise Gift']
+    },
+    {
+        id: 'popular',
+        title: 'Most Popular',
+        bottleCount: 2,
+        freeBottles: 1,
+        totalBottles: 3,
+        supply: '90 Day Supply',
+        pricePerBottle: 69,
+        totalPrice: 207,
+        originalPrice: 534,
+        savings: 330,
+        shipping: 0,
+        isBestValue: false,
+        isMostPopular: true,
+        features: ['60 Days Guarantee', 'Surprise Gift']
+    }
+];
+
+export const BONUS_BOOKS = [
+    {
+        title: "Bonus #1",
+        subtitle: "Skin SOS: Your Go-To Guide for Eczema, Psoriasis & Itchy Skin",
+        value: 55,
+        description: "Discover the bizarre yet effective “sweet honey trick,” cabbage leaf remedy, and aloe vera hack that instantly soothe dry, irritated skin. Plus, learn which 5 “healthy” foods are secretly making eczema and psoriasis worse.",
+        image: "https://placehold.co/400x500/16a34a/ffffff?text=Skin+SOS+Book"
+    },
+    {
+        title: "Bonus #2",
+        subtitle: "Barefoot Ready: Quick Steps to Regrow Healthy Nails & Erase Fungus Damage",
+        value: 54,
+        description: "Discover 5 unusual tricks, including the 20-second “soda soak,” the “piano tapping” method, and a surprising breakfast add-on, for stronger, brighter, fungus-free nails. These simple daily habits can improve overall foot health fast.",
+        image: "https://placehold.co/400x500/16a34a/ffffff?text=Barefoot+Ready"
+    },
+    {
+        title: "Bonus #3",
+        subtitle: "The Fungal Full Detox Plan: Boost Energy & Revive Your Metabolism",
+        value: 54,
+        description: "Discover 5 delicious “dessert recipes” that help flush out hidden fungal cells and support full-body recovery. Includes a 14-day smoothie protocol, a 1-minute sunlight trick for brain fog, and ancient Greek remedies for lasting fungus relief.",
+        image: "https://placehold.co/400x500/16a34a/ffffff?text=Fungal+Detox"
+    }
+];
+
 export const FAQS = [
     {
-        q: "Why can't I find Kerassentials on Amazon or Walmart?",
-        a: "To ensure the total integrity of the 8-in-1 formula, the manufacturer chose not to distribute Kerassentials on marketplaces like Amazon or Walmart. Intelligence reports [Source: Morningstar] confirm the circulation of inauthentic and diluted batches on these platforms. By buying only through this Official Site, you ensure the original product, the 2026 batch freshness seal, and full refund rights."
+        q: "Why isn't the original Kerassentials sold on Amazon, Walmart, or eBay?",
+        a: "To be direct: to avoid what we call 'fungal fertilization'. Intelligence reports from January 2026 confirm that pirate bottles on marketplaces use inert stable oils (like low-quality canola or soy). These oils don't penetrate the nail; they just create a layer of moisture that feeds the fungus. To ensure you receive the Authorized 2026 Batch with USP-grade Undecylenic Acid, the manufacturer has banned third-party sales. Buying here is the only way to get the real formula and official support."
     },
     {
-        q: "Is Kerassentials really safe and FDA approved?",
-        a: "Kerassentials is formulated with 100% natural ingredients and produced in the USA in FDA-Registered and GMP Certified facilities. It is important to note that, as it is classified as a cosmetic/topical oil, the FDA regulates its safety and manufacturing but does not 'approve' dietary supplements or cosmetics individually. This transparency is what differentiates us from products that make miraculous promises without regulatory basis."
+        q: "Is Kerassentials FDA approved?",
+        a: "In the USA, the FDA doesn't 'approve' cosmetics or topical oils the same way it approves prescription drugs. What we do is more rigorous: Kerassentials is produced in an FDA-Registered and GMP Certified (Good Manufacturing Practices) facility. This transparency is what sets us apart from products that make 'magic' promises without following federal hygiene and purity standards."
     },
     {
-        q: "How long until I see visible results?",
-        a: "Nail biology requires patience, not miracles. While many of our 14,357+ users report improvements in clarity and texture within the first few weeks, deeper results occur after 3 to 6 months of consistent use. The key is daily application to allow the Tea Tree and Clove oils to penetrate the nail bed. Therefore, the 6-bottle package (with 72.63% discount) is the most recommended choice for a complete renewal cycle."
+        q: "Is there any trick to accelerate results?",
+        a: "Yes. Nail science shows that the nail plate is a dense barrier. We recommend what experts call the '3-Minute Post-Shower Technique'. Apply the oil immediately after getting out of a warm shower, when the keratin protein is most malleable and skin pores are open. This allows the 8 ingredients to penetrate deep into the nail bed, instead of just sitting on the surface."
     },
     {
-        q: "What happens if I am not satisfied?",
-        a: "Your trust is protected by a 60-Day Money-Back Guarantee, no questions asked. If for any reason you feel Kerassentials is not for you, simply contact our official support (or directly via the BuyGoods payment processor) to receive a full refund of your investment. The risk is entirely on our side; your only job is to test the formula and see the difference on your feet."
+        q: "How long until I see total clearance?",
+        a: "Biology doesn't rush. While many of our 14,357+ users report improvement in texture within 21 days, total renewal of a damaged nail takes 3 to 6 months. It's a matter of biological logic that the 6-bottle package (with the real 72.63% discount) is our technical recommendation: it covers the full growth cycle without giving the fungus a chance to build resistance due to interrupted use."
+    },
+    {
+        q: "What if my biology is the exception and it doesn't work?",
+        a: "The financial risk is 100% ours. You have a 60-Day Money-Back Guarantee, processed directly by BuyGoods. If you don't notice the spots fading or the nail getting stronger, simply request a refund. We don't ask hard questions. We keep this policy because satisfaction data for the current batch is the highest in the product's history."
+    },
+    {
+        q: "Can I use it with nail polish or other products?",
+        a: "You can, but for maximum performance, the nail should be 'naked'. Kerassentials needs direct contact. If you need to use nail polish, apply the oil, wait 5 minutes for full absorption, and then apply the polish. The goal is to create an environment where the fungus cannot survive, and direct penetration is key."
     }
 ];
 
