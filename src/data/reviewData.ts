@@ -63,53 +63,40 @@ export const SCIENCE_SECTION = {
 
 export const REVIEWS = [
     {
-        name: "Sarah Jenkins",
-        age: 34,
-        location: "Seattle, WA",
-        quote: "Finally Clear Nails Again",
-        text: "I almost gave up after buying a 'cheap' bottle on Amazon that looked like cooking oil. I only realized the difference when I received the Authorized Batch from the official site. The texture and aroma are completely different. Don't risk your health for a $10 difference."
-    },
-    {
-        name: "Michael Thompson",
-        age: 47,
-        location: "Phoenix, AZ",
-        quote: "Worth Every Drop",
-        text: "After 3 years of hiding my feet in socks, I was the biggest skeptic. But the science of Tea Tree and Clove oils here is real. It wasn't an overnight miracle, but for the first time in years, the yellow spot is receding."
-    },
-    {
-        name: "Linda Walker",
-        age: 52,
-        location: "Boston, MA",
-        quote: "Slow but Real Results",
-        text: "My biggest fear was the refund. I bought it with hesitation, but the official site support was impeccable. I ended up not even needing the 60-day guarantee because the product delivers exactly what it promises."
-    },
-    {
-        name: "Christopher Dave",
-        age: 39,
-        location: "Orlando, FL",
-        quote: "Natural and Effective",
-        text: "It seems silly, but being able to wear sandals at a BBQ without feeling ashamed changed my summer. Application takes 30 seconds and has no side effects like the pills I used to take."
-    },
-    {
-        name: "Jennifer Wilson",
-        age: 45,
-        location: "Austin, TX",
-        quote: "Confidence Restored",
-        text: "As a nurse, I analyze labels. Most oils don't penetrate the nail bed. This 8-ingredient formula was the only one that really 'absorbed'. Follow the application protocol and results will appear."
-    },
-    {
-        name: "James H.",
-        age: 60,
-        location: "Chicago, IL",
-        quote: "Best Alternative to Prescriptions",
-        text: "I spent hundreds of dollars on pharmacy solutions that never worked. The 72.63% discount on the 6-bottle kit was the best investment I made to stop wasting money on things that don't solve it."
-    },
-    {
-        name: "Ashley Smith",
-        age: 29,
+        title: "The Victory Over Hiding",
+        name: "Emily R.",
         location: "New York, NY",
-        quote: "Trust the Original",
-        text: "I saw the report on the 14,357+ satisfied users and decided to give it one last chance. If you are in doubt, just make sure you are on the official site. The original is the only one that has the 2026 factory seal."
+        text: "To be honest, I spent most of my 20s and early 30s hiding my feet. I tried every drugstore cream, but it felt like I was just painting over the problem. Kerassentials was the first time I saw a real, structural change. My nails actually look healthy and 'normal' again. I finally bought my first pair of open sandals in years, knowing I have the Authorized 2026 Batch protecting me."
+    },
+    {
+        title: "Ending the 'Cheap' Trap",
+        name: "Mark T.",
+        location: "Austin, TX",
+        text: "I’ll admit I was skeptical. I actually fell for a 'cheaper' version on a marketplace first, and it was a total waste of money. When I got the real oil with the 72.63% discount from this site, the difference was night and day. The yellow thickness faded, and my nails feel stronger than they have in a decade. It’s worth every drop of the original formula."
+    },
+    {
+        title: "Honesty About Time",
+        name: "Susan L.",
+        location: "Orlando, FL",
+        text: "This isn't a 'magic wand' that works overnight, and that’s actually why I trust it. It took about three weeks of daily application before the steady improvement became undeniable. My nails are smooth, and the skin irritation is gone. If you have the patience to follow the protocol, the results are very real. I'm glad I didn't give up."
+    },
+    {
+        title: "The Safety Shield",
+        name: "Daniel K.",
+        location: "Los Angeles, CA",
+        text: "I was terrified of that burning sensation you get from harsh chemical prescriptions. Kerassentials is different—it’s gentle but incredibly effective. No discomfort, no weird smells. After a month, the change is significant. Knowing it’s made in an FDA-registered facility gave me the peace of mind I needed to start."
+    },
+    {
+        title: "Confidence Returned",
+        name: "Patricia M.",
+        location: "Chicago, IL",
+        text: "I used to dread summer because of my toenails. It sounds small, but feeling confident in flip-flops again changed my life. The fungus stopped spreading immediately, and the new growth is coming in crystal clear. I’m proud to be one of the 14,357+ verified users who finally found the solution that works."
+    },
+    {
+        title: "The Smart Health Choice",
+        name: "Robert H.",
+        location: "Phoenix, AZ",
+        text: "At my age, I didn't want to load my liver with heavy prescription medications just for a nail issue. Kerassentials was the perfect alternative. My nails are clearer and stronger, and the best part is the 60-Day Guarantee. It took the financial risk off the table and allowed me to focus on getting my health back."
     }
 ];
 

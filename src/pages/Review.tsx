@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Star, Check, ShieldCheck, MapPin, ChevronDown, ChevronUp, Lock, Truck, Clock, AlertTriangle } from 'lucide-react';
+import { Star, Check, ShieldCheck, MapPin, ChevronDown, ChevronUp, Lock, Truck, AlertTriangle } from 'lucide-react';
 import Footer from '../components/Footer';
 import {
     AFFILIATE_LINK, HERO_CONTENT, PROBLEM_SECTION, SOLUTION_SECTION,
@@ -13,10 +13,6 @@ export default function Review() {
 
     const [openFaq, setOpenFaq] = useState<number | null>(null);
     const toggleFaq = (index: number) => setOpenFaq(openFaq === index ? null : index);
-
-    // Split reviews: Top 3 for Featured, Rest for Wall
-    const featuredReviews = [REVIEWS[0], REVIEWS[4], REVIEWS[1]]; // Amazon, Nurse, Skeptic
-    const otherReviews = [REVIEWS[2], REVIEWS[3], REVIEWS[5], REVIEWS[6]];
 
     return (
         <main className="min-h-screen bg-slate-50 font-sans text-slate-800">
@@ -95,27 +91,55 @@ export default function Review() {
                 </div>
             </section>
 
-            {/* FEATURED REVIEWS (BELOW HERO) */}
+            {/* FEATURED REVIEWS (ALL) */}
             <section className="bg-slate-50 py-12 border-b border-slate-200">
                 <div className="max-w-7xl mx-auto px-4">
-                    <h3 className="text-center text-slate-500 font-semibold uppercase tracking-wider mb-8 text-sm">Verified Reviews from Verified Buyers</h3>
-                    <div className="grid md:grid-cols-3 gap-6">
-                        {featuredReviews.map((review, idx) => (
-                            <div key={idx} className="bg-white p-6 rounded-xl shadow-sm border border-slate-100 relative">
-                                <div className="flex items-center gap-2 mb-3">
-                                    <div className="flex text-yellow-400">★★★★★</div>
-                                    <span className="text-xs font-bold text-emerald-600 px-2 py-0.5 bg-emerald-50 rounded-full flex items-center gap-1">
-                                        <ShieldCheck className="w-3 h-3" /> Verified Purchase
-                                    </span>
-                                </div>
-                                <h4 className="font-bold text-slate-900 mb-2">{review.quote}</h4>
-                                <p className="text-sm text-slate-600 leading-relaxed mb-4">{review.text}</p>
-                                <div className="flex items-center justify-between mt-auto">
-                                    <span className="text-sm font-semibold text-slate-900">{review.name}</span>
-                                    <div className="flex items-center text-xs text-slate-400">
-                                        <MapPin className="w-3 h-3 mr-1" /> {review.location}
+                    <h3 className="text-center text-slate-500 font-semibold uppercase tracking-wider mb-8 text-sm">🛡️ Verified User Intelligence</h3>
+                    <div className="grid md:grid-cols-2 gap-6">
+                        {REVIEWS.map((review, idx) => (
+                            <div key={idx} className="contents">
+                                <div className="bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex flex-col h-full relative">
+                                    <div className="flex items-center gap-2 mb-3">
+                                        <div className="flex text-yellow-400">★★★★★</div>
+                                        <span className="text-xs font-bold text-emerald-600 px-2 py-0.5 bg-emerald-50 rounded-full flex items-center gap-1">
+                                            <ShieldCheck className="w-3 h-3" /> Verified Purchase
+                                        </span>
+                                    </div>
+                                    {/* Title with styling */}
+                                    <h4 className="font-bold text-slate-900 mb-2 italic text-lg">{review.title}</h4>
+
+                                    <p className="text-sm text-slate-600 leading-relaxed mb-4 flex-grow">{review.text}</p>
+
+                                    <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
+                                        <span className="text-sm font-semibold text-slate-900">{review.name}</span>
+                                        <div className="flex items-center text-xs text-slate-400">
+                                            <MapPin className="w-3 h-3 mr-1" /> {review.location}
+                                        </div>
                                     </div>
                                 </div>
+
+                                {/* Insert Button after specific items (Visual check: idx 1 (2nd item), idx 3 (4th item), idx 5 (6th item)) */}
+                                {idx === 1 && (
+                                    <div className="md:col-span-2 text-center py-6">
+                                        <a href={AFFILIATE_LINK} className="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all uppercase text-sm md:text-base animate-pulse">
+                                            ➔ CHECK OFFICIAL BATCH AVAILABILITY (72.63% OFF)
+                                        </a>
+                                    </div>
+                                )}
+                                {idx === 3 && (
+                                    <div className="md:col-span-2 text-center py-6">
+                                        <a href={AFFILIATE_LINK} className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all uppercase text-sm md:text-base animate-pulse">
+                                            ➔ SECURE YOUR AUTHORIZED BOTTLE NOW
+                                        </a>
+                                    </div>
+                                )}
+                                {idx === 5 && (
+                                    <div className="md:col-span-2 text-center py-6">
+                                        <a href={AFFILIATE_LINK} className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all uppercase text-sm md:text-base animate-pulse">
+                                            ➔ GET THE OFFICIAL DISCOUNT & 60-DAY GUARANTEE
+                                        </a>
+                                    </div>
+                                )}
                             </div>
                         ))}
                     </div>
@@ -183,33 +207,6 @@ export default function Review() {
                         <div className="shrink-0">
                             <img src="https://placehold.co/300x300/334155/ffffff?text=Doctor+Microscope" alt="Scientific Research" className="rounded-xl shadow-lg border border-slate-700 w-64 h-64 object-cover" loading="lazy" />
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* MORE REVIEWS */}
-            <section className="py-16 px-4 bg-slate-50">
-                <div className="max-w-7xl mx-auto">
-                    <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">Real Stories from Real Customers</h2>
-                    <div className="columns-1 md:columns-2 gap-6 space-y-6">
-                        {otherReviews.map((review, i) => (
-                            <div key={i} className="break-inside-avoid bg-white p-6 rounded-xl shadow-sm border border-slate-100">
-                                <div className="flex items-center justify-between mb-4">
-                                    <div className="flex text-yellow-500">★★★★★</div>
-                                    <span className="text-xs text-slate-400 flex items-center"><Check className="w-3 h-3 mr-1" /> Verified</span>
-                                </div>
-                                <p className="text-slate-700 italic mb-4">{review.text}</p>
-                                <div className="flex items-center gap-3">
-                                    <div className="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center text-slate-500 font-bold">
-                                        {review.name.charAt(0)}
-                                    </div>
-                                    <div>
-                                        <div className="font-bold text-slate-900 text-sm">{review.name}</div>
-                                        <div className="text-xs text-slate-500">{review.location}</div>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
                     </div>
                 </div>
             </section>
