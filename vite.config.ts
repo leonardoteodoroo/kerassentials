@@ -53,9 +53,11 @@ export default defineConfig(({ mode }) => {
     build: {
       rollupOptions: {
         output: {
-          manualChunks: {
-            vendor: ['react', 'react-dom'],
-            icons: ['lucide-react'],
+          manualChunks(id) {
+            // Split all node_modules into a vendor chunk
+            if (id.includes('node_modules')) {
+              return 'vendor';
+            }
           },
         },
       },
