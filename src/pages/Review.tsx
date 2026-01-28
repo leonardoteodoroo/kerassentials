@@ -444,13 +444,13 @@ export default function Review() {
                                         <h3 className="text-2xl font-bold text-slate-900 mb-2">{option.title}</h3>
                                         <p className="text-sm text-slate-500 font-medium tracking-wide uppercase mb-6">{option.supply}</p>
 
-                                        <div className="relative w-full flex items-center justify-center mb-6">
+                                        <div className="relative w-full h-48 flex items-center justify-center mb-6">
                                             {/* Product Image */}
-                                            <div className="relative z-10 w-full transition-transform duration-500 group-hover:scale-105">
+                                            <div className="relative z-10 w-full h-full transition-transform duration-500 group-hover:scale-105">
                                                 <img
                                                     src={option.image}
                                                     alt={option.alt}
-                                                    className="w-full object-contain drop-shadow-2xl"
+                                                    className="w-full h-full object-contain drop-shadow-2xl"
                                                     loading="lazy"
                                                 />
                                             </div>
