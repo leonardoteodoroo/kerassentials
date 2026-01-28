@@ -1,4 +1,4 @@
-export const AFFILIATE_LINK = "https://thekerassentials.com/text.php?aff_id=1119055";
+export const AFFILIATE_LINK = "https://thekerassentials.com/text.php?aff_id=1119055#order-now";
 
 export const HERO_CONTENT = {
     title: "The Simple Oil Blend Helping Thousands Fight Nail Fungus Naturally in 2026",
