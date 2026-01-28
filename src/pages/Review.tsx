@@ -35,7 +35,13 @@ export default function Review() {
 
             {/* HERO SECTION */}
             <section className="relative bg-white border-b border-slate-200 overflow-hidden">
-                <div className="absolute inset-0 bg-green-50/50 pointer-events-none" />
+                <div className="absolute inset-0 z-0">
+                    <picture>
+                        <source media="(max-width: 768px)" srcSet={HERO_CONTENT.images.heroBackgroundMobile} />
+                        <img src={HERO_CONTENT.images.heroBackgroundDesktop} alt="Background" className="w-full h-full object-cover opacity-10" loading="eager" />
+                    </picture>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/80 pointer-events-none z-0" />
                 <div className="max-w-7xl mx-auto px-4 py-12 lg:py-20 relative z-10">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="space-y-8">
@@ -67,12 +73,12 @@ export default function Review() {
                         </div>
                         <div className="relative">
                             {/* Visual Placeholder for Product */}
-                            <div className="relative aspect-square max-w-md mx-auto bg-slate-100 rounded-2xl overflow-hidden shadow-2xl ring-1 ring-slate-200">
+                            <div className="relative aspect-square max-w-md mx-auto rounded-2xl overflow-hidden ">
                                 <img
-                                    src="https://placehold.co/600x600/f1f5f9/10b981?text=Kerassentials+Official+Bottle"
-                                    alt="Kerassentials Product Bottle"
+                                    src={HERO_CONTENT.images.productBottle}
+                                    alt={HERO_CONTENT.images.productAlt}
                                     loading="eager"
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-contain hover:scale-105 transition-transform duration-500"
                                 />
                                 <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur rounded-lg p-4 shadow-lg border border-slate-100">
                                     <div className="flex items-center justify-between">
@@ -99,14 +105,23 @@ export default function Review() {
                     <div className="grid md:grid-cols-3 gap-6">
                         {SHORT_REVIEWS.map((review, idx) => (
                             <div key={idx} className="bg-white p-6 rounded-xl shadow-sm border border-slate-100 relative">
-                                <div className="flex items-center gap-2 mb-3">
-                                    <div className="flex text-yellow-400">★★★★★</div>
-                                    {review.extraInfo && (
-                                        <span className="text-xs font-bold text-emerald-600 px-2 py-0.5 bg-emerald-50 rounded-full flex items-center gap-1">
-                                            <ShieldCheck className="w-3 h-3" /> {review.extraInfo}
-                                        </span>
-                                    )}
+                                <div className="flex items-center gap-4 mb-4">
+                                    <img
+                                        src={review.image}
+                                        alt={review.alt}
+                                        className="w-14 h-14 rounded-full object-cover border-2 border-emerald-50 shadow-sm"
+                                        loading="lazy"
+                                    />
+                                    <div>
+                                        <div className="flex text-yellow-400 text-sm">★★★★★</div>
+                                        {review.extraInfo && (
+                                            <span className="text-[10px] font-bold text-emerald-600 px-2 py-0.5 bg-emerald-50 rounded-full inline-block mt-1">
+                                                {review.extraInfo}
+                                            </span>
+                                        )}
+                                    </div>
                                 </div>
+
                                 <h4 className="font-bold text-slate-900 mb-2">{review.quote}</h4>
                                 <p className="text-sm text-slate-600 leading-relaxed mb-4">{review.text}</p>
                                 <div className="flex items-center justify-between mt-auto">
@@ -131,7 +146,7 @@ export default function Review() {
                             {PROBLEM_SECTION.text.map((p, i) => <p key={i}>{p}</p>)}
                         </div>
                         <div className="my-8 rounded-xl overflow-hidden shadow-lg border border-slate-100">
-                            <img src="https://placehold.co/800x400/f8fafc/64748b?text=Healthy+Feet+Visual" alt="Healthy feet context" loading="lazy" className="w-full" />
+                            <img src={PROBLEM_SECTION.image} alt={PROBLEM_SECTION.alt} loading="lazy" className="w-full object-cover max-h-[500px]" />
                         </div>
                     </div>
 
@@ -175,7 +190,7 @@ export default function Review() {
                             </div>
                         </div>
                         <div className="shrink-0">
-                            <img src="https://placehold.co/300x300/334155/ffffff?text=Doctor+Microscope" alt="Scientific Research" className="rounded-xl shadow-lg border border-slate-700 w-64 h-64 object-cover" loading="lazy" />
+                            <img src={SCIENCE_SECTION.image} alt={SCIENCE_SECTION.alt} className="rounded-xl shadow-lg border border-slate-700 w-64 h-64 object-cover" loading="lazy" />
                         </div>
                     </div>
                 </div>
@@ -199,10 +214,18 @@ export default function Review() {
                                     </div>
                                     <h4 className="font-bold text-slate-800 mb-3 italic text-xl">{review.title}</h4>
                                     <p className="text-base text-slate-600 leading-relaxed mb-6 flex-grow">{review.text}</p>
-                                    <div className="flex items-center justify-between mt-auto pt-6 border-t border-slate-100">
-                                        <span className="font-bold text-slate-900">{review.name}</span>
-                                        <div className="flex items-center text-xs text-slate-500">
-                                            <MapPin className="w-3 h-3 mr-1" /> {review.location}
+                                    <div className="flex items-center gap-4 mt-auto pt-6 border-t border-slate-100">
+                                        <img
+                                            src={review.image}
+                                            alt={review.alt}
+                                            className="w-12 h-12 rounded-full object-cover border border-slate-200"
+                                            loading="lazy"
+                                        />
+                                        <div>
+                                            <span className="font-bold text-slate-900 block leading-tight">{review.name}</span>
+                                            <div className="flex items-center text-xs text-slate-500 mt-0.5">
+                                                <MapPin className="w-3 h-3 mr-1" /> {review.location}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -244,9 +267,15 @@ export default function Review() {
                     </div>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
                         {INGREDIENTS.map((ing, i) => (
-                            <div key={i} className="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow text-center">
-                                <div className="w-16 h-16 mx-auto bg-emerald-100 rounded-full flex items-center justify-center mb-4 text-emerald-600 font-bold text-xl">
-                                    {ing.name.charAt(0)}
+                            <div key={i} className="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow text-center group">
+                                <div className="w-24 h-24 mx-auto mb-4 relative">
+                                    <div className="absolute inset-0 bg-emerald-100 rounded-full rotate-3 group-hover:rotate-6 transition-transform"></div>
+                                    <img
+                                        src={ing.image}
+                                        alt={ing.alt}
+                                        className="w-full h-full rounded-full object-cover relative z-10 border-2 border-white shadow-sm"
+                                        loading="lazy"
+                                    />
                                 </div>
                                 <h3 className="font-bold text-lg text-slate-900 mb-2">{ing.name}</h3>
                                 <p className="text-sm text-emerald-700 font-medium">{ing.desc}</p>
@@ -415,18 +444,16 @@ export default function Review() {
                                         <h3 className="text-2xl font-bold text-slate-900 mb-2">{option.title}</h3>
                                         <p className="text-sm text-slate-500 font-medium tracking-wide uppercase mb-6">{option.supply}</p>
 
-                                        <div className="relative w-full aspect-[4/3] flex items-center justify-center mb-6">
-                                            {/* Product Image Placeholder - Dynamic Stacking */}
-                                            <div className="relative z-10 w-48 transition-transform duration-500 group-hover:scale-105">
+                                        <div className="relative w-full flex items-center justify-center mb-6">
+                                            {/* Product Image */}
+                                            <div className="relative z-10 w-full transition-transform duration-500 group-hover:scale-105">
                                                 <img
-                                                    src={`https://placehold.co/400x320/transparent/transparent?text=${option.totalBottles}+Bottles`}
-                                                    alt={`${option.totalBottles} Bottles`}
-                                                    className="w-full drop-shadow-2xl"
+                                                    src={option.image}
+                                                    alt={option.alt}
+                                                    className="w-full object-contain drop-shadow-2xl"
+                                                    loading="lazy"
                                                 />
                                             </div>
-                                            {/* Glow Effect behind image */}
-                                            <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full blur-3xl opacity-50 
-                                                ${isBestValue ? 'bg-emerald-200' : 'bg-slate-100'}`}></div>
                                         </div>
                                     </div>
 

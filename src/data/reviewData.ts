@@ -12,7 +12,13 @@ export const HERO_CONTENT = {
         "Easy topical application that fits daily routines",
         "Free from harsh chemicals, GMO-free and safe for regular use"
     ],
-    ctaText: "ORDER NOW"
+    ctaText: "ORDER NOW",
+    images: {
+        heroBackgroundDesktop: "/background-hero.webp",
+        heroBackgroundMobile: "/background-hero-mobile.webp",
+        productBottle: "/official_kerassentials_bottle_2026_authorized_batch_with_dropper_applicator_on_a_clinical_background.-e21.webp",
+        productAlt: "Official Kerassentials Bottle 2026 Authorized Batch with Dropper Applicator"
+    }
 };
 
 export const PROBLEM_SECTION = {
@@ -24,7 +30,9 @@ export const PROBLEM_SECTION = {
         "The itching, cracking skin, and unpleasant appearance can make you feel uncomfortable and frustrated — especially when you’re doing everything “right” and still not seeing results.",
         "Worst of all, nail fungus can make you feel stuck, as if it’s something you’ll just have to live with forever.",
         "That’s why finding a natural solution that targets the root cause — not just the surface — becomes so important."
-    ]
+    ],
+    image: "/close-up_of_healthy_and_clear_toenails_resting_on_a_clean_white_towel__showing_natural_recovery_results.-9e6.webp",
+    alt: "Close-up of healthy and clear toenails resting on a clean white towel"
 };
 
 export const SOLUTION_SECTION = {
@@ -45,14 +53,14 @@ export const MECHANISM_STEPS = [
 ];
 
 export const INGREDIENTS = [
-    { name: "Lavender Oil", desc: "Protects nail keratin & fights fungus" },
-    { name: "Organic Flaxseed Oil", desc: "Boosts natural skin immunity" },
-    { name: "Almond Oil", desc: "Prevents infection & soothes fungus" },
-    { name: "Tea Tree Oil", desc: "Supports antifungal environment" },
-    { name: "Lemongrass Oil", desc: "Prevents future infection spread" },
-    { name: "Aloe Vera", desc: "Soothes itching & moisturizes skin" },
-    { name: "Undecylenic Acid", desc: "Commonly used in antifungal care" },
-    { name: "Tocopheryl Acetate", desc: "Vitamin E preventing skin dryness" }
+    { name: "Lavender Oil", desc: "Protects nail keratin & fights fungus", image: "/fresh_lavender_sprigs_and_a_bottle_of_lavender_essential_oil_for_natural_nail_keratin_protection.-c20.webp", alt: "Fresh lavender sprigs and lavender essential oil" },
+    { name: "Organic Flaxseed Oil", desc: "Boosts natural skin immunity", image: "/organic_flaxseeds_on_a_wooden_spoon_next_to_a_vial_of_flaxseed_oil_rich_in_omega-3_for_nail_health.-e18.webp", alt: "Organic flaxseeds and vial of flaxseed oil" },
+    { name: "Almond Oil", desc: "Prevents infection & soothes fungus", image: "/handful_of_raw_almonds_and_a_small_glass_bottle_of_almond_oil_for_skin_nourishment_and_fungus_prevention-0de.webp", alt: "Raw almonds and almond oil bottle" },
+    { name: "Tea Tree Oil", desc: "Supports antifungal environment", image: "/pure_tea_tree_oil_bottle_with_fresh_melaleuca_leaves__known_for_strong_natural_antifungal_properties.-887.webp", alt: "Pure tea tree oil bottle with fresh leaves" },
+    { name: "Lemongrass Oil", desc: "Prevents future infection spread", image: "/bundled_fresh_lemongrass_stalks_and_yellowish_lemongrass_oil_used_in_kerassentials_for_nail_protection.-636.webp", alt: "Fresh lemongrass stalks and oil" },
+    { name: "Aloe Vera", desc: "Soothes itching & moisturizes skin", image: "/sliced_fresh_aloe_vera_leaf_showing_clear_gel_for_soothing_skin_and_moisturizing_nail_beds.-b89.webp", alt: "Sliced fresh aloe vera leaf showing clear gel" },
+    { name: "Undecylenic Acid", desc: "Commonly used in antifungal care", image: "/macro_view_of_pure_undecylenic_acid_crystals_in_a_laboratory_dish_for_professional_grade_nail_care.-0ed.webp", alt: "Macro view of pure undecylenic acid crystals" },
+    { name: "Tocopheryl Acetate", desc: "Vitamin E preventing skin dryness", image: "/golden_vitamin_e_softgel_capsules_and_oil_for_protecting_nail_keratin_and_skin_health.-6e1.webp", alt: "Golden vitamin E softgel capsules and oil" }
 ];
 
 export const HOW_TO_USE = [
@@ -70,7 +78,9 @@ export const SCIENCE_SECTION = {
         "According to scientists from the U.S. Centers for Disease Control and Prevention, most people stop the antifungal treatment before the infection has been completely eliminated and before a fully healthy nail has grown out.",
         "If you stop halfway through and interrupt your body from completely eliminating the infection, you only make the fungus stronger.",
         "This leads to antifungal resistance, which makes it almost impossible to get rid of the infection next time you use the same treatment."
-    ]
+    ],
+    image: "/doutora_kerassentials.webp",
+    alt: "Scientific research on antifungal resistance in a laboratory"
 };
 
 export const SHORT_REVIEWS = [
@@ -80,7 +90,9 @@ export const SHORT_REVIEWS = [
         location: "Seattle, WA",
         extraInfo: "Used for 3 weeks",
         quote: "Finally Clear Nails Again",
-        text: "I almost gave up after buying a 'cheap' bottle on Amazon. I only realized the difference when I received the Authorized Batch from the official site. The texture and aroma are completely different."
+        text: "I almost gave up after buying a 'cheap' bottle on Amazon. I only realized the difference when I received the Authorized Batch from the official site. The texture and aroma are completely different.",
+        image: "/candid_photo_of_sarah_jenkins_smiling_at_home__a_verified_user_of_kerassentials_from_seattle.-103.webp",
+        alt: "Sarah Jenkins smiling at home"
     },
     {
         name: "Michael Thompson",
@@ -88,7 +100,9 @@ export const SHORT_REVIEWS = [
         location: "Phoenix, AZ",
         extraInfo: "Used for 5 weeks",
         quote: "Worth Every Drop",
-        text: "After 3 years of hiding my feet in socks, I was the biggest skeptic. But the science of Tea Tree and Clove oils here is real. It wasn't an overnight miracle, but the yellow spot is receding."
+        text: "After 3 years of hiding my feet in socks, I was the biggest skeptic. But the science of Tea Tree and Clove oils here is real. It wasn't an overnight miracle, but the yellow spot is receding.",
+        image: "/casual_outdoor_selfie_of_michael_thompson_from_phoenix__showing_a_happy_and_authentic_customer.-d17.webp",
+        alt: "Casual outdoor selfie of Michael Thompson"
     },
     {
         name: "Linda Walker",
@@ -96,7 +110,9 @@ export const SHORT_REVIEWS = [
         location: "Boston, MA",
         extraInfo: "Used for 2 months",
         quote: "Slow but Real Results",
-        text: "My biggest fear was the refund. I bought it with hesitation, but the official site support was impeccable. I ended up not even needing the 60-day guarantee because the product delivers."
+        text: "My biggest fear was the refund. I bought it with hesitation, but the official site support was impeccable. I ended up not even needing the 60-day guarantee because the product delivers.",
+        image: "/real_kitchen_photo_of_linda_walker__a_kerassentials_user_sharing_her_steady_recovery_results.-218.webp",
+        alt: "Linda Walker in her kitchen"
     },
     {
         name: "Christopher Dave",
@@ -104,7 +120,9 @@ export const SHORT_REVIEWS = [
         location: "Orlando, FL",
         extraInfo: "Verified Purchase",
         quote: "Natural and Effective",
-        text: "It seems silly, but being able to wear sandals at a BBQ without feeling ashamed changed my summer. Application takes 30 seconds and has no side effects like pills."
+        text: "It seems silly, but being able to wear sandals at a BBQ without feeling ashamed changed my summer. Application takes 30 seconds and has no side effects like pills.",
+        image: "/unposed_photo_of_christopher_dave_at_a_bbq__showing_confidence_after_using_the_official_oil_blend.-e5e.webp",
+        alt: "Christopher Dave at a BBQ"
     },
     {
         name: "Jennifer Wilson",
@@ -112,7 +130,9 @@ export const SHORT_REVIEWS = [
         location: "Austin, TX",
         extraInfo: "Nurse / Verified User",
         quote: "Confidence Restored",
-        text: "As a nurse, I analyze labels. Most oils don't penetrate the nail bed. This 8-ingredient formula was the only one that really 'absorbed'. Follow the application protocol and results will appear."
+        text: "As a nurse, I analyze labels. Most oils don't penetrate the nail bed. This 8-ingredient formula was the only one that really 'absorbed'. Follow the application protocol and results will appear.",
+        image: "/authentic_photo_of_nurse_jennifer_wilson_in_medical_scrubs__verifying_the_kerassentials_formula.-d25.webp",
+        alt: "Nurse Jennifer Wilson in scrubs"
     },
     {
         name: "James H.",
@@ -120,7 +140,9 @@ export const SHORT_REVIEWS = [
         location: "Chicago, IL",
         extraInfo: "Used for 4 weeks",
         quote: "Best Alternative",
-        text: "I spent hundreds of dollars on pharmacy solutions that never worked. The 72.63% discount on the 6-bottle kit was the best investment I made to stop wasting money."
+        text: "I spent hundreds of dollars on pharmacy solutions that never worked. The 72.63% discount on the 6-bottle kit was the best investment I made to stop wasting money.",
+        image: "/simple_home_photo_of_james_h._from_chicago__holding_his_authorized_batch_shipment_of_kerassentials.-71a.webp",
+        alt: "James H. holding his Kerassentials shipment"
     },
     {
         name: "Ashley Smith",
@@ -128,7 +150,9 @@ export const SHORT_REVIEWS = [
         location: "New York, NY",
         extraInfo: "Verified Purchase",
         quote: "Trust the Original",
-        text: "I saw the report on the 14,357+ satisfied users and decided to give it one last chance. If you are in doubt, just make sure you are on the official site. The original is the only one."
+        text: "I saw the report on the 14,357+ satisfied users and decided to give it one last chance. If you are in doubt, just make sure you are on the official site. The original is the only one.",
+        image: "/natural_mirror_selfie_of_ashley_smith__a_verified_buyer_of_the_original_kerassentials_8-in-1_formula.-c7f.webp",
+        alt: "Ashley Smith mirror selfie"
     }
 ];
 
@@ -139,42 +163,54 @@ export const DETAILED_REVIEWS = [
         name: "Emily R.",
         location: "New York, NY",
         extraInfo: "Changes after 5 weeks",
-        text: "To be honest, I spent most of my 20s and early 30s hiding my feet. I tried every drugstore cream, but it felt like I was just painting over the problem. Kerassentials was the first time I saw a real, structural change. My nails actually look healthy and 'normal' again. I finally bought my first pair of open sandals in years, knowing I have the Authorized 2026 Batch protecting me."
+        text: "To be honest, I spent most of my 20s and early 30s hiding my feet. I tried every drugstore cream, but it felt like I was just painting over the problem. Kerassentials was the first time I saw a real, structural change. My nails actually look healthy and 'normal' again. I finally bought my first pair of open sandals in years, knowing I have the Authorized 2026 Batch protecting me.",
+        image: "/candid_photo_of_emily_r._in_new_york_city__wearing_sandals_with_confidence_after_5_weeks_of_use.-740.webp",
+        alt: "Emily R. wearing sandals in NYC"
     },
     {
         title: "Ending the 'Cheap' Trap",
         name: "Mark T.",
         location: "Austin, TX",
         extraInfo: "Verified Purchase",
-        text: "I’ll admit I was skeptical. I actually fell for a 'cheaper' version on a marketplace first, and it was a total waste of money. When I got the real oil with the 72.63% discount from this site, the difference was night and day. The yellow thickness faded, and my nails feel stronger than they have in a decade. It’s worth every drop of the original formula."
+        text: "I’ll admit I was skeptical. I actually fell for a 'cheaper' version on a marketplace first, and it was a total waste of money. When I got the real oil with the 72.63% discount from this site, the difference was night and day. The yellow thickness faded, and my nails feel stronger than they have in a decade. It’s worth every drop of the original formula.",
+        image: "/amateur_photo_of_mark_t._on_a_wooden_porch_in_texas__sharing_his_experience_with_the_2026_batch.-a78.webp",
+        alt: "Mark T. on a wooden porch"
     },
     {
         title: "Honesty About Time",
         name: "Susan L.",
         location: "Orlando, FL",
         extraInfo: "Consistent use: 3 months",
-        text: "This isn't a 'magic wand' that works overnight, and that’s actually why I trust it. It took about three weeks of daily application before the steady improvement became undeniable. My nails are smooth, and the skin irritation is gone. If you have the patience to follow the protocol, the results are very real. I'm glad I didn't give up."
+        text: "This isn't a 'magic wand' that works overnight, and that’s actually why I trust it. It took about three weeks of daily application before the steady improvement became undeniable. My nails are smooth, and the skin irritation is gone. If you have the patience to follow the protocol, the results are very real. I'm glad I didn't give up.",
+        image: "/warm_and_honest_photo_of_susan_l._in_a_sunroom__a_long-term_user_of_the_natural_nail_protocol.-6c5.webp",
+        alt: "Susan L. in a sunroom"
     },
     {
         title: "The Safety Shield",
         name: "Daniel K.",
         location: "Los Angeles, CA",
         extraInfo: "Verified Purchase",
-        text: "I was terrified of that burning sensation you get from harsh chemical prescriptions. Kerassentials is different—it’s gentle but incredibly effective. No discomfort, no weird smells. After a month, the change is significant. Knowing it’s made in an FDA-registered facility gave me the peace of mind I needed to start."
+        text: "I was terrified of that burning sensation you get from harsh chemical prescriptions. Kerassentials is different—it’s gentle but incredibly effective. No discomfort, no weird smells. After a month, the change is significant. Knowing it’s made in an FDA-registered facility gave me the peace of mind I needed to start.",
+        image: "/casual_smartphone_photo_of_daniel_k._in_his_los_angeles_apartment__showing_real_user_results.-157.webp",
+        alt: "Daniel K. in his apartment"
     },
     {
         title: "Confidence Returned",
         name: "Patricia M.",
         location: "Chicago, IL",
         extraInfo: "Used for 6 weeks",
-        text: "I used to dread summer because of my toenails. It sounds small, but feeling confident in flip-flops again changed my life. The fungus stopped spreading immediately, and the new growth is coming in crystal clear. I’m proud to be one of the 14,357+ verified users who finally found the solution that works."
+        text: "I used to dread summer because of my toenails. It sounds small, but feeling confident in flip-flops again changed my life. The fungus stopped spreading immediately, and the new growth is coming in crystal clear. I’m proud to be one of the 14,357+ verified users who finally found the solution that works.",
+        image: "https://placehold.co/150x150/e2e8f0/64748b?text=Patricia+M.",
+        alt: "Patricia M."
     },
     {
         title: "The Smart Health Choice",
         name: "Robert H.",
         location: "Phoenix, AZ",
         extraInfo: "Verified Purchase",
-        text: "At my age, I didn't want to load my liver with heavy prescription medications just for a nail issue. Kerassentials was the perfect alternative. My nails are clearer and stronger, and the best part is the 60-Day Guarantee. It took the financial risk off the table and allowed me to focus on getting my health back."
+        text: "At my age, I didn't want to load my liver with heavy prescription medications just for a nail issue. Kerassentials was the perfect alternative. My nails are clearer and stronger, and the best part is the 60-Day Guarantee. It took the financial risk off the table and allowed me to focus on getting my health back.",
+        image: "/relaxed_patio_photo_of_robert_h.__a_60-year-old_user_who_chose_the_natural_alternative_for_nail_care.-8a3.webp",
+        alt: "Robert H. on his patio"
     }
 ];
 
@@ -207,7 +243,9 @@ export const PRICING_OPTIONS = [
         shipping: 9.99,
         isBestValue: false,
         isMostPopular: false,
-        features: ['60 Days Guarantee']
+        features: ['60 Days Guarantee'],
+        image: "/ingle_bottle_kerassentials_starter_package_for_a_30-day_trial__showing_the_2026_authorized_formula.webp",
+        alt: "Single Bottle Kerassentials Starter Package"
     },
     {
         id: 'best-value',
@@ -223,7 +261,9 @@ export const PRICING_OPTIONS = [
         shipping: 0,
         isBestValue: true,
         isMostPopular: false,
-        features: ['Biggest Discount', '60 Days Guarantee', '3 FREE Ebooks!', 'Surprise Gift']
+        features: ['Biggest Discount', '60 Days Guarantee', '3 FREE Ebooks!', 'Surprise Gift'],
+        image: "/kerassentials_6-bottle_supply_package_with_free_shipping_and_two_bonus_wellness_e-books__showing_maximum_discount..webp",
+        alt: "Kerassentials 6-Bottle Supply Package with Free Shipping"
     },
     {
         id: 'popular',
@@ -239,7 +279,9 @@ export const PRICING_OPTIONS = [
         shipping: 0,
         isBestValue: false,
         isMostPopular: true,
-        features: ['60 Days Guarantee', 'Surprise Gift']
+        features: ['60 Days Guarantee', 'Surprise Gift'],
+        image: "/kerassentials_3-bottle_popular_package_with_free_shipping_and_digital_bonus_guides__offering_significant_savings..webp",
+        alt: "Kerassentials 3-Bottle Popular Package"
     }
 ];
 
@@ -249,21 +291,21 @@ export const BONUS_BOOKS = [
         subtitle: "Skin SOS: Your Go-To Guide for Eczema, Psoriasis & Itchy Skin",
         value: 55,
         description: "Discover the bizarre yet effective “sweet honey trick,” cabbage leaf remedy, and aloe vera hack that instantly soothe dry, irritated skin. Plus, learn which 5 “healthy” foods are secretly making eczema and psoriasis worse.",
-        image: "https://placehold.co/400x500/16a34a/ffffff?text=Skin+SOS+Book"
+        image: "/bonus1.webp"
     },
     {
         title: "Bonus #2",
         subtitle: "Barefoot Ready: Quick Steps to Regrow Healthy Nails & Erase Fungus Damage",
         value: 54,
         description: "Discover 5 unusual tricks, including the 20-second “soda soak,” the “piano tapping” method, and a surprising breakfast add-on, for stronger, brighter, fungus-free nails. These simple daily habits can improve overall foot health fast.",
-        image: "https://placehold.co/400x500/16a34a/ffffff?text=Barefoot+Ready"
+        image: "/bonus2.webp"
     },
     {
         title: "Bonus #3",
         subtitle: "The Fungal Full Detox Plan: Boost Energy & Revive Your Metabolism",
         value: 54,
         description: "Discover 5 delicious “dessert recipes” that help flush out hidden fungal cells and support full-body recovery. Includes a 14-day smoothie protocol, a 1-minute sunlight trick for brain fog, and ancient Greek remedies for lasting fungus relief.",
-        image: "https://placehold.co/400x500/16a34a/ffffff?text=Fungal+Detox"
+        image: "/bonus3.webp"
     }
 ];
 
