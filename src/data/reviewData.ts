@@ -3,9 +3,9 @@ export const AFFILIATE_LINK = "https://thekerassentials.com/text.php?aff_id=1119
 export const HERO_CONTENT = {
     title: "The Simple Oil Blend Helping Thousands Fight Nail Fungus Naturally in 2026",
     checklist: [
-        "Targets stubborn toenail fungus naturally with plant-based oils",
-        "Helps strengthen and support healthier nails over time",
-        "Promotes smoother, clearer skin around nails and feet",
+        "Helps improve the look of thick/discolored toenails",
+        "Soothes itchy, irritated skin around toes",
+        "Supports stronger-looking nails over time",
         "Deeply nourishes dry or brittle nails with natural nutrients",
         "Supports long-term fungal protection and prevents recurrence",
         "Made with natural antifungal and antibacterial ingredients",
@@ -31,22 +31,34 @@ export const SOLUTION_SECTION = {
     title: "What Is Kerassentials?",
     text: [
         "Kerassentials is a natural topical oil designed to support nail and skin health, especially for people dealing with stubborn toenail fungus and unhealthy-looking nails.",
-        "Unlike creams or harsh treatments that only work on the surface, Kerassentials was developed to target the root cause of fungal growth by creating an environment where fungus struggles to survive. Its formula combines powerful plant-based oils known for their antifungal, antibacterial, and skin-nourishing properties.",
-        "Kerassentials is applied directly to the affected nail and surrounding skin, where it absorbs quickly and starts working from the outside in. With consistent use, it helps improve nail appearance, support healthier nail growth, and restore smoother, clearer skin around the toes.",
-        "The product is made with natural ingredients, free from aggressive chemicals, and designed for daily use without discomfort. It is suitable for men and women who want a gentle yet effective solution for nail fungus without relying on prescriptions or invasive treatments.",
-        "In short, Kerassentials offers a natural, practical approach to improving nail health while supporting long-term protection against recurring fungal issues."
+        "Unlike creams or harsh treatments that only work on the surface, Kerassentials was developed to target the root cause by creating an environment where fungus struggles to survive.",
+        "Kerassentials is applied directly to the affected nail and surrounding skin. It absorbs quickly and starts working from the outside in. With consistent use, it helps improve nail appearance, support healthier nail growth, and restore smoother, clearer skin around the toes.",
+        "The product is made with natural ingredients, free from aggressive chemicals. It is suitable for men and women who want a gentle yet effective solution without relying on prescriptions."
     ]
 };
 
+export const MECHANISM_STEPS = [
+    { title: "Apply", desc: "Brush on affected area" },
+    { title: "Absorbs", desc: "Penetrates nail bed" },
+    { title: "Supports", desc: "Fights fungal growth" },
+    { title: "Results", desc: "Clearer nails over time" }
+];
+
 export const INGREDIENTS = [
-    { name: "Lavender Oil", desc: "Supports nail keratin, nourishes the skin, and helps fight stubborn fungus." },
-    { name: "Organic Flaxseed Oil", desc: "Helps boost skin’s natural defenses and supports healthy inflammation response." },
-    { name: "Almond Oil", desc: "Deeply nourishes brittle nails while helping protect against infections." },
-    { name: "Tea Tree Oil", desc: "Known for its powerful antifungal properties that help curb fungal growth." },
-    { name: "Lemongrass Oil", desc: "Helps prevent future infections and supports healthier nail surroundings." },
-    { name: "Aloe Vera", desc: "Soothes irritated skin, moisturizes deeply, and supports fungal defense." },
-    { name: "Undecylenic Acid", desc: "A beneficial fatty acid that helps protect nails against fungal issues." },
-    { name: "Tocopheryl Acetate", desc: "A stable form of Vitamin E that helps protect skin and prevent dryness." }
+    { name: "Lavender Oil", desc: "Protects nail keratin & fights fungus" },
+    { name: "Organic Flaxseed Oil", desc: "Boosts natural skin immunity" },
+    { name: "Almond Oil", desc: "Prevents infection & soothes fungus" },
+    { name: "Tea Tree Oil", desc: "Supports antifungal environment" },
+    { name: "Lemongrass Oil", desc: "Prevents future infection spread" },
+    { name: "Aloe Vera", desc: "Soothes itching & moisturizes skin" },
+    { name: "Undecylenic Acid", desc: "Commonly used in antifungal care" },
+    { name: "Tocopheryl Acetate", desc: "Vitamin E preventing skin dryness" }
+];
+
+export const HOW_TO_USE = [
+    { title: "Cleanse", desc: "Wash and dry feet thoroughly." },
+    { title: "Apply", desc: "Brush oil on nails and skin." },
+    { title: "Absorb", desc: "Let dry for 1-2 minutes." }
 ];
 
 export const SCIENCE_SECTION = {
@@ -61,40 +73,44 @@ export const SCIENCE_SECTION = {
     ]
 };
 
-// 7 SHORT REVIEWS (Top of Page)
 export const SHORT_REVIEWS = [
     {
         name: "Sarah Jenkins",
         age: 34,
         location: "Seattle, WA",
+        extraInfo: "Used for 3 weeks",
         quote: "Finally Clear Nails Again",
-        text: "I almost gave up after buying a 'cheap' bottle on Amazon that looked like cooking oil. I only realized the difference when I received the Authorized Batch from the official site. The texture and aroma are completely different. Don't risk your health for a $10 difference."
+        text: "I almost gave up after buying a 'cheap' bottle on Amazon. I only realized the difference when I received the Authorized Batch from the official site. The texture and aroma are completely different."
     },
     {
         name: "Michael Thompson",
         age: 47,
         location: "Phoenix, AZ",
+        extraInfo: "Used for 5 weeks",
         quote: "Worth Every Drop",
-        text: "After 3 years of hiding my feet in socks, I was the biggest skeptic. But the science of Tea Tree and Clove oils here is real. It wasn't an overnight miracle, but for the first time in years, the yellow spot is receding."
+        text: "After 3 years of hiding my feet in socks, I was the biggest skeptic. But the science of Tea Tree and Clove oils here is real. It wasn't an overnight miracle, but the yellow spot is receding."
     },
     {
         name: "Linda Walker",
         age: 52,
         location: "Boston, MA",
+        extraInfo: "Used for 2 months",
         quote: "Slow but Real Results",
-        text: "My biggest fear was the refund. I bought it with hesitation, but the official site support was impeccable. I ended up not even needing the 60-day guarantee because the product delivers exactly what it promises."
+        text: "My biggest fear was the refund. I bought it with hesitation, but the official site support was impeccable. I ended up not even needing the 60-day guarantee because the product delivers."
     },
     {
         name: "Christopher Dave",
         age: 39,
         location: "Orlando, FL",
+        extraInfo: "Verified Purchase",
         quote: "Natural and Effective",
-        text: "It seems silly, but being able to wear sandals at a BBQ without feeling ashamed changed my summer. Application takes 30 seconds and has no side effects like the pills I used to take."
+        text: "It seems silly, but being able to wear sandals at a BBQ without feeling ashamed changed my summer. Application takes 30 seconds and has no side effects like pills."
     },
     {
         name: "Jennifer Wilson",
         age: 45,
         location: "Austin, TX",
+        extraInfo: "Nurse / Verified User",
         quote: "Confidence Restored",
         text: "As a nurse, I analyze labels. Most oils don't penetrate the nail bed. This 8-ingredient formula was the only one that really 'absorbed'. Follow the application protocol and results will appear."
     },
@@ -102,15 +118,17 @@ export const SHORT_REVIEWS = [
         name: "James H.",
         age: 60,
         location: "Chicago, IL",
-        quote: "Best Alternative to Prescriptions",
-        text: "I spent hundreds of dollars on pharmacy solutions that never worked. The 72.63% discount on the 6-bottle kit was the best investment I made to stop wasting money on things that don't solve it."
+        extraInfo: "Used for 4 weeks",
+        quote: "Best Alternative",
+        text: "I spent hundreds of dollars on pharmacy solutions that never worked. The 72.63% discount on the 6-bottle kit was the best investment I made to stop wasting money."
     },
     {
         name: "Ashley Smith",
         age: 29,
         location: "New York, NY",
+        extraInfo: "Verified Purchase",
         quote: "Trust the Original",
-        text: "I saw the report on the 14,357+ satisfied users and decided to give it one last chance. If you are in doubt, just make sure you are on the official site. The original is the only one that has the 2026 factory seal."
+        text: "I saw the report on the 14,357+ satisfied users and decided to give it one last chance. If you are in doubt, just make sure you are on the official site. The original is the only one."
     }
 ];
 
@@ -120,36 +138,42 @@ export const DETAILED_REVIEWS = [
         title: "The Victory Over Hiding",
         name: "Emily R.",
         location: "New York, NY",
+        extraInfo: "Changes after 5 weeks",
         text: "To be honest, I spent most of my 20s and early 30s hiding my feet. I tried every drugstore cream, but it felt like I was just painting over the problem. Kerassentials was the first time I saw a real, structural change. My nails actually look healthy and 'normal' again. I finally bought my first pair of open sandals in years, knowing I have the Authorized 2026 Batch protecting me."
     },
     {
         title: "Ending the 'Cheap' Trap",
         name: "Mark T.",
         location: "Austin, TX",
+        extraInfo: "Verified Purchase",
         text: "I’ll admit I was skeptical. I actually fell for a 'cheaper' version on a marketplace first, and it was a total waste of money. When I got the real oil with the 72.63% discount from this site, the difference was night and day. The yellow thickness faded, and my nails feel stronger than they have in a decade. It’s worth every drop of the original formula."
     },
     {
         title: "Honesty About Time",
         name: "Susan L.",
         location: "Orlando, FL",
+        extraInfo: "Consistent use: 3 months",
         text: "This isn't a 'magic wand' that works overnight, and that’s actually why I trust it. It took about three weeks of daily application before the steady improvement became undeniable. My nails are smooth, and the skin irritation is gone. If you have the patience to follow the protocol, the results are very real. I'm glad I didn't give up."
     },
     {
         title: "The Safety Shield",
         name: "Daniel K.",
         location: "Los Angeles, CA",
+        extraInfo: "Verified Purchase",
         text: "I was terrified of that burning sensation you get from harsh chemical prescriptions. Kerassentials is different—it’s gentle but incredibly effective. No discomfort, no weird smells. After a month, the change is significant. Knowing it’s made in an FDA-registered facility gave me the peace of mind I needed to start."
     },
     {
         title: "Confidence Returned",
         name: "Patricia M.",
         location: "Chicago, IL",
+        extraInfo: "Used for 6 weeks",
         text: "I used to dread summer because of my toenails. It sounds small, but feeling confident in flip-flops again changed my life. The fungus stopped spreading immediately, and the new growth is coming in crystal clear. I’m proud to be one of the 14,357+ verified users who finally found the solution that works."
     },
     {
         title: "The Smart Health Choice",
         name: "Robert H.",
         location: "Phoenix, AZ",
+        extraInfo: "Verified Purchase",
         text: "At my age, I didn't want to load my liver with heavy prescription medications just for a nail issue. Kerassentials was the perfect alternative. My nails are clearer and stronger, and the best part is the 60-Day Guarantee. It took the financial risk off the table and allowed me to focus on getting my health back."
     }
 ];
@@ -245,6 +269,26 @@ export const BONUS_BOOKS = [
 
 export const FAQS = [
     {
+        q: "Will it stain my socks or shoes?",
+        a: "No. Kerassentials is formulated to absorb quickly into the skin and nail. Wait about 3-5 minutes after application before putting on socks to ensure it has fully penetrated. Once dry, it helps keep skin fresh without leaving greasy residue or stains."
+    },
+    {
+        q: "How exactly do I apply it?",
+        a: "It's simple: 1) Clean and dry your feet. 2) Apply the oil to the nail and surrounding skin using the included brush. 3) Let it absorb for a few minutes. Repeat this 4 times a day (twice in the morning, twice in the afternoon) for best results."
+    },
+    {
+        q: "Is this a subscription?",
+        a: "No, this is a one-time payment. There are no hidden auto-ship programs or monthly charges. You only pay for what you order today."
+    },
+    {
+        q: "Who should NOT use it?",
+        a: "Kerassentials is made with natural ingredients and is generally safe. However, if you have a known allergy to essential oils (like tea tree or clove) or are pregnant/nursing, we recommend consulting your doctor first. Do not use on open wounds."
+    },
+    {
+        q: "Can I use it with other treatments?",
+        a: "We generally recommend using Kerassentials on its own to allow the formula to work effectively without interference. If you are using prescribed medication, please consult your healthcare provider before combining treatments."
+    },
+    {
         q: "Why isn't the original Kerassentials sold on Amazon, Walmart, or eBay?",
         a: "To be direct: to avoid what we call 'fungal fertilization'. Intelligence reports from January 2026 confirm that pirate bottles on marketplaces use inert stable oils (like low-quality canola or soy). These oils don't penetrate the nail; they just create a layer of moisture that feeds the fungus. To ensure you receive the Authorized 2026 Batch with USP-grade Undecylenic Acid, the manufacturer has banned third-party sales. Buying here is the only way to get the real formula and official support."
     },
@@ -253,20 +297,12 @@ export const FAQS = [
         a: "In the USA, the FDA doesn't 'approve' cosmetics or topical oils the same way it approves prescription drugs. What we do is more rigorous: Kerassentials is produced in an FDA-Registered and GMP Certified (Good Manufacturing Practices) facility. This transparency is what sets us apart from products that make 'magic' promises without following federal hygiene and purity standards."
     },
     {
-        q: "Is there any trick to accelerate results?",
-        a: "Yes. Nail science shows that the nail plate is a dense barrier. We recommend what experts call the '3-Minute Post-Shower Technique'. Apply the oil immediately after getting out of a warm shower, when the keratin protein is most malleable and skin pores are open. This allows the 8 ingredients to penetrate deep into the nail bed, instead of just sitting on the surface."
-    },
-    {
         q: "How long until I see total clearance?",
         a: "Biology doesn't rush. While many of our 14,357+ users report improvement in texture within 21 days, total renewal of a damaged nail takes 3 to 6 months. It's a matter of biological logic that the 6-bottle package (with the real 72.63% discount) is our technical recommendation: it covers the full growth cycle without giving the fungus a chance to build resistance due to interrupted use."
     },
     {
         q: "What if my biology is the exception and it doesn't work?",
         a: "The financial risk is 100% ours. You have a 60-Day Money-Back Guarantee, processed directly by BuyGoods. If you don't notice the spots fading or the nail getting stronger, simply request a refund. We don't ask hard questions. We keep this policy because satisfaction data for the current batch is the highest in the product's history."
-    },
-    {
-        q: "Can I use it with nail polish or other products?",
-        a: "You can, but for maximum performance, the nail should be 'naked'. Kerassentials needs direct contact. If you need to use nail polish, apply the oil, wait 5 minutes for full absorption, and then apply the polish. The goal is to create an environment where the fungus cannot survive, and direct penetration is key."
     }
 ];
 

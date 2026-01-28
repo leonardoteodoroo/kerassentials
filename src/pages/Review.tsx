@@ -3,7 +3,8 @@ import { Star, Check, ShieldCheck, MapPin, ChevronDown, ChevronUp, Lock, Truck, 
 import Footer from '../components/Footer';
 import {
     AFFILIATE_LINK, HERO_CONTENT, PROBLEM_SECTION, SOLUTION_SECTION,
-    INGREDIENTS, SCIENCE_SECTION, SHORT_REVIEWS, DETAILED_REVIEWS, PROS_CONS, FAQS, REFERENCES, POLICY_TEXT, PRICING_OPTIONS, BONUS_BOOKS
+    INGREDIENTS, SCIENCE_SECTION, SHORT_REVIEWS, DETAILED_REVIEWS, PROS_CONS, FAQS, REFERENCES, POLICY_TEXT, PRICING_OPTIONS, BONUS_BOOKS,
+    MECHANISM_STEPS, HOW_TO_USE
 } from '../data/reviewData';
 
 export default function Review() {
@@ -100,9 +101,11 @@ export default function Review() {
                             <div key={idx} className="bg-white p-6 rounded-xl shadow-sm border border-slate-100 relative">
                                 <div className="flex items-center gap-2 mb-3">
                                     <div className="flex text-yellow-400">★★★★★</div>
-                                    <span className="text-xs font-bold text-emerald-600 px-2 py-0.5 bg-emerald-50 rounded-full flex items-center gap-1">
-                                        <ShieldCheck className="w-3 h-3" /> Verified Purchase
-                                    </span>
+                                    {review.extraInfo && (
+                                        <span className="text-xs font-bold text-emerald-600 px-2 py-0.5 bg-emerald-50 rounded-full flex items-center gap-1">
+                                            <ShieldCheck className="w-3 h-3" /> {review.extraInfo}
+                                        </span>
+                                    )}
                                 </div>
                                 <h4 className="font-bold text-slate-900 mb-2">{review.quote}</h4>
                                 <p className="text-sm text-slate-600 leading-relaxed mb-4">{review.text}</p>
@@ -135,8 +138,24 @@ export default function Review() {
                     {/* Solution */}
                     <div className="space-y-6 bg-emerald-50/50 p-8 rounded-2xl border border-emerald-100">
                         <h2 className="text-3xl font-bold text-emerald-900">{SOLUTION_SECTION.title}</h2>
-                        <div className="prose prose-lg text-slate-700">
+                        <div className="prose prose-lg text-slate-700 mb-8">
                             {SOLUTION_SECTION.text.map((p, i) => <p key={i}>{p}</p>)}
+                        </div>
+
+                        {/* Mechanism Steps */}
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                            {MECHANISM_STEPS.map((step, idx) => (
+                                <div key={idx} className="text-center relative">
+                                    <div className="w-12 h-12 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm border border-emerald-100 text-emerald-600 font-bold text-lg mb-2 z-10 relative">
+                                        {idx + 1}
+                                    </div>
+                                    {idx < MECHANISM_STEPS.length - 1 && (
+                                        <div className="hidden md:block absolute top-6 left-1/2 w-full h-0.5 bg-emerald-200 -z-0"></div>
+                                    )}
+                                    <h4 className="font-bold text-emerald-900 text-sm">{step.title}</h4>
+                                    <p className="text-xs text-emerald-700">{step.desc}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -172,9 +191,11 @@ export default function Review() {
                                 <div className="bg-white p-8 rounded-xl shadow-lg border border-slate-100 flex flex-col h-full relative">
                                     <div className="flex items-center gap-2 mb-4">
                                         <div className="flex text-yellow-400">★★★★★</div>
-                                        <span className="text-xs font-bold text-emerald-600 px-2 py-0.5 bg-emerald-50 rounded-full flex items-center gap-1">
-                                            <ShieldCheck className="w-3 h-3" /> Verified Purchase
-                                        </span>
+                                        {review.extraInfo && (
+                                            <span className="text-xs font-bold text-emerald-600 px-2 py-0.5 bg-emerald-50 rounded-full flex items-center gap-1">
+                                                <ShieldCheck className="w-3 h-3" /> {review.extraInfo}
+                                            </span>
+                                        )}
                                     </div>
                                     <h4 className="font-bold text-slate-800 mb-3 italic text-xl">{review.title}</h4>
                                     <p className="text-base text-slate-600 leading-relaxed mb-6 flex-grow">{review.text}</p>
@@ -221,16 +242,32 @@ export default function Review() {
                         <h2 className="text-3xl font-bold text-slate-900 mb-4">Inside Every Drop: Simple, Natural Science</h2>
                         <p className="text-lg text-slate-600">A bespoke powerful formula that brings together special high-quality oils and minerals.</p>
                     </div>
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
                         {INGREDIENTS.map((ing, i) => (
                             <div key={i} className="bg-slate-50 p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow text-center">
                                 <div className="w-16 h-16 mx-auto bg-emerald-100 rounded-full flex items-center justify-center mb-4 text-emerald-600 font-bold text-xl">
                                     {ing.name.charAt(0)}
                                 </div>
                                 <h3 className="font-bold text-lg text-slate-900 mb-2">{ing.name}</h3>
-                                <p className="text-sm text-slate-600">{ing.desc}</p>
+                                <p className="text-sm text-emerald-700 font-medium">{ing.desc}</p>
                             </div>
                         ))}
+                    </div>
+
+                    {/* How to Use Section */}
+                    <div className="bg-emerald-900 text-white rounded-2xl p-8 md:p-12 shadow-xl">
+                        <h3 className="text-2xl font-bold text-center mb-8">How to Use Kerassentials</h3>
+                        <div className="grid md:grid-cols-3 gap-8 text-center">
+                            {HOW_TO_USE.map((step, idx) => (
+                                <div key={idx} className="space-y-3">
+                                    <div className="w-10 h-10 mx-auto bg-white text-emerald-900 rounded-full flex items-center justify-center font-bold text-lg">
+                                        {idx + 1}
+                                    </div>
+                                    <h4 className="font-bold text-xl">{step.title}</h4>
+                                    <p className="text-emerald-100">{step.desc}</p>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
@@ -346,8 +383,12 @@ export default function Review() {
                         </h2>
                         <p className="text-xl text-slate-600 leading-relaxed">
                             Join over <span className="font-bold text-slate-900">14,000+ happy customers</span>. <br className="hidden md:block" />
-                            Select the package that fits your goals.
+                            Select the package that fits your goals. <br className="hidden md:block" />
+                            <span className="text-emerald-600 font-bold text-sm bg-emerald-50 px-2 py-1 rounded mt-2 inline-block">Most people choose 3 or 6 bottles for best results</span>
                         </p>
+                        <div className="mt-4 flex items-center justify-center gap-2 text-sm font-bold text-slate-500">
+                            <ShieldCheck className="w-4 h-4 text-emerald-600" /> Try it risk-free — 60-day money-back
+                        </div>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8 lg:gap-10 max-w-6xl mx-auto items-end">
@@ -404,7 +445,7 @@ export default function Review() {
                                         <div className={`inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-lg text-sm font-bold
                                             ${isBestValue ? 'bg-emerald-100 text-emerald-800' : 'bg-slate-100 text-slate-600'}`}>
                                             <span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse"></span>
-                                            Total Savings: ${option.savings}
+                                            You Save ${option.savings} Today
                                         </div>
                                     </div>
 
