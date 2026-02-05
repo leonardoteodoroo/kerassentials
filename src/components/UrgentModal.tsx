@@ -33,41 +33,14 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
     const [currentDate, setCurrentDate] = useState('');
 
     // Animation State
-    const [progress, setProgress] = useState(0);
-    const [isVerified, setIsVerified] = useState(false);
+
 
     useEffect(() => {
         const now = new Date();
         setCurrentDate(now.toLocaleDateString('en-US'));
     }, []);
 
-    // ---------------------------------------------------------
-    // PROGRESS BAR ANIMATION LOGIC
-    // ---------------------------------------------------------
-    useEffect(() => {
-        if (isOpen) {
-            setProgress(0);
-            setIsVerified(false);
-            const target = 100;
-            const duration = 3500;
-            const startTime = performance.now();
 
-            const animate = (currentTime: number) => {
-                const elapsed = currentTime - startTime;
-                const progressRatio = Math.min(elapsed / duration, 1);
-                const ease = 1 - Math.pow(1 - progressRatio, 3);
-                const currentVal = Math.floor(ease * target);
-                setProgress(currentVal);
-
-                if (progressRatio < 1) {
-                    requestAnimationFrame(animate);
-                } else {
-                    setIsVerified(true);
-                }
-            };
-            requestAnimationFrame(animate);
-        }
-    }, [isOpen]);
 
     // ---------------------------------------------------------
     // MATHEMATICAL SCALING
@@ -276,52 +249,20 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                         {/* 4. FOOTER - Fixed Height */}
                         <footer className="shrink-0 border-t border-gray-200 bg-white px-6 py-3 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
 
-                            {/* Progress Bar */}
-                            <div className="mb-2.5 w-full">
-                                <div className="mb-1 flex items-end justify-between px-0.5">
-                                    <span className="text-[14px] font-bold uppercase tracking-widest text-gray-600">
-                                        Verifying Authenticity...
-                                    </span>
-                                    <span className={`text-[14px] font-black uppercase tracking-widest ${isVerified ? 'text-safe' : 'text-gray-600'}`}>
-                                        {progress}% Verified
-                                    </span>
-                                </div>
-                                <div className="relative h-1.5 w-full overflow-hidden rounded-full bg-gray-200">
-                                    <div
-                                        className="absolute inset-y-0 left-0 rounded-full bg-safe transition-all duration-75 ease-out"
-                                        style={{ width: `${progress}%` }}
-                                    ></div>
-                                </div>
-                            </div>
+
 
                             {/* Primary CTA - Bigger Font */}
                             <button
                                 onClick={onConfirm}
-                                disabled={!isVerified}
-                                className={`group relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg py-2.5 shadow-lg transition-all duration-300 
-                  ${isVerified
-                                        ? 'bg-safe hover:scale-[1.02] active:scale-[0.98] cursor-pointer animate-pulse-action'
-                                        : 'bg-gray-400 cursor-not-allowed opacity-80'
-                                    }`}
+                                className="group relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg py-2.5 shadow-lg transition-all duration-300 bg-safe hover:scale-[1.02] active:scale-[0.98] cursor-pointer animate-pulse-action"
                             >
-                                {isVerified ? (
-                                    <>
-                                        <div className="absolute inset-0 animate-pulse bg-white/10"></div>
-                                        <span className="relative z-10 text-[28px] font-black uppercase tracking-wide text-white leading-none">
-                                            Activate Protection
-                                        </span>
-                                        <span className="relative z-10 text-[14px] font-medium text-white mt-0.5">
-                                            & Order Securely
-                                        </span>
-                                    </>
-                                ) : (
-                                    <div className="flex items-center gap-2">
-                                        <Loader2 className="h-5 w-5 animate-spin text-white/80" aria-hidden="true" />
-                                        <span className="text-[25px] font-bold uppercase tracking-wide text-white/90">
-                                            Please Wait...
-                                        </span>
-                                    </div>
-                                )}
+                                <div className="absolute inset-0 animate-pulse bg-white/10"></div>
+                                <span className="relative z-10 text-[28px] font-black uppercase tracking-wide text-white leading-none">
+                                    Activate Protection
+                                </span>
+                                <span className="relative z-10 text-[14px] font-medium text-white mt-0.5">
+                                    & Order Securely
+                                </span>
                             </button>
 
                             {/* Feedback Button */}
@@ -350,11 +291,11 @@ const UrgentModal: React.FC<UrgentModalProps> = ({
                                 <div className="flex items-center gap-4">
                                     <div className="flex items-center gap-1.5 text-[13px] text-gray-600">
                                         <span className="relative flex h-1.5 w-1.5">
-                                            <span className={`absolute inline-flex h-full w-full rounded-full ${isVerified ? 'animate-ping bg-green-400' : 'bg-gray-400'} opacity-75`}></span>
-                                            <span className={`relative inline-flex h-1.5 w-1.5 rounded-full ${isVerified ? 'bg-green-500' : 'bg-gray-400'}`}></span>
+                                            <span className="absolute inline-flex h-full w-full rounded-full animate-ping bg-green-400 opacity-75"></span>
+                                            <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-green-500"></span>
                                         </span>
                                         <span className="font-bold tracking-wider">
-                                            {isVerified ? 'ONLINE' : 'CONNECTING...'}
+                                            ONLINE
                                         </span>
                                     </div>
                                     <button
